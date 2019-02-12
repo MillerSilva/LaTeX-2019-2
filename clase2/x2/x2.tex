@@ -1,0 +1,412 @@
+\documentclass{report}
+\usepackage[utf8]{inputenc}
+
+\usepackage{graphicx}
+\usepackage{here}
+
+\newcommand*{\fd}{\longrightarrow}
+
+\newcommand{\sbf}{\sffamily\bfseries}
+
+\newcommand{\impo}[1]{\textbf{\underline{#1}}}
+
+\newcommand{\parc}[2]{\frac{\partial#1}{\partial#2}}
+
+\newcommand{\pl}{\ensuremath{x_1}}
+
+\begin{document}
+	
+texto \pl\ texto2 $\pl$ texto3
+
+$$
+a\fd b
+$$
+
+$$
+\parc{f}{x}=\frac{\partial f}{\partial x}
+$$
+
+texto \impo{importante} texto
+
+{\sbf hola mundo} texto
+	
+\setcounter{chapter}{4}
+	
+\chapter{Mi primera matemática}
+	
+texto texto textoa $a+b+c$ texto texto texto texto texto texto texto texto texto texto texto texto texto texto $8-5$ texto texto \(3+4\) textotexto texto textotexto texto texto	 
+\[a+b-c(d)+1\]
+texto texto textoa $a+b+c$ texto texto texto texto texto texto texto texto texto 
+$$
+6+x+y+7
+$$
+texto texto textoa $a+b+c$ texto texto texto texto texto texto texto texto texto 
+\begin{equation}
+a+b+c=5>4,\quad 3<6
+\end{equation}
+
+$$
+a_1+ a_{22}+a^4+ a^{34}
+$$
+
+$$
+\frac{34}{a+b}
+$$
+
+$$
+\sqrt{x}\qquad \sqrt[n]{y}
+$$
+
+$$
+\sum_{i=1}^n a_i
+$$
+
+$$
+\int_a^b f(x)dx
+$$
+
+$$
+\int\limits_a^b f(x)dx
+$$
+
+$$
+\sum\nolimits_{i=1}^n a_i
+$$
+	
+texto... \qquad texto\dots 
+	
+$$
+a,b,\ldots,c,d\in A
+$$
+
+$$
+a+b+c+\cdots+z =90
+$$
+
+$$
+\vdots\qquad \ddots
+$$
+
+$$
+\alpha +\beta + \gamma=\theta \neq \vartheta\in \Gamma
+$$
+
+$$
+5\le 6\leq 7, 7\geq 0
+$$
+
+$$
+f(5)\to f(8)\longrightarrow f(9)
+$$
+
+\newpage
+
+texto texto $\int_a^b f(x)dx\bigcup_{i=1}^n$ texto
+$$
+\int\bigcup_{i=1}^n
+$$
+
+$$
+\cos\alpha\neq cos\alpha
+$$
+
+$$
+\lim_{x\to 0}\frac{1}{x}=\infty
+$$
+
+$$
+\tilde{x}\quad \widetilde{abc}
+$$
+
+$$
+\hat{a}\qquad \widehat{abc}
+$$
+
+$$
+\dot{a}\quad\vec{b}\quad\bar{c}
+$$
+
+$$
+\left(\frac{a}{b}\right)
+$$
+
+$$
+\left(\frac{a}{b}\right.
+$$
+
+$$
+f(x)=g(x) \mbox{ cuando } x\in X
+$$
+
+$$
+xyz\quad \mathrm{xyz}\quad \mathsf{xyz}\quad \mathtt{xyz}\quad\mathit{xyz}\quad\mathbf{xyz} \quad\mathcal{XYZ}
+$$
+
+$$
+\left(\begin{array}{ccc}
+a & b & c \\
+d & e & f \\
+g & h & i
+\end{array}\right]
+$$
+
+$$
+f(x)=\left\{\begin{array}{ll}
+x^3 , & x \in A \\
+x^2, & x\in B
+\end{array}\right.
+$$
+
+$$
+\underline{abdc}\quad\overline{xyz}
+$$
+
+$$
+\underbrace{3+3+3+3}_{=12}\quad \overbrace{4+4+4+4}^{=16}
+$$
+
+$$
+5+6\stackrel{\mathrm{def}}{=}11
+$$
+
+\addtocounter{equation}{20}
+
+\begin{eqnarray}
+a+b+c&=&d+e \\
+5&=&6 \\
+p+m&=&3
+\end{eqnarray}
+
+\begin{eqnarray*}
+a+b+c&=&d+e \\
+5&=&6 \\
+p+m&=&3
+\end{eqnarray*}
+
+$$
+f(x)=g(x), \;\forall x\in X
+$$
+
+$$
+a\;b\:c\,d\!e
+$$
+
+$$
+x^{x^x} \scriptstyle{x}\quad\scriptscriptstyle{x}
+$$
+
+texto texto texto texto $\displaystyle\sum_{i=1}^n a_i$ texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto
+
+$$
+\int\quad \textstyle{\int_a^b f(x)dx}
+$$
+
+$$
+\big(\frac{a}{b}\big)\quad \Big(\frac{a}{b}\Big)\quad \bigg(\frac{a}{b}\bigg)\quad \Bigg(\frac{a}{\sum_a^b b}\Bigg)
+$$
+
+
+
+	
+	
+	
+	
+	
+	
+	
+\addtocounter{chapter}{4}	
+	
+	
+\chapter{Terminando letras}
+\setcounter{page}{90}
+	
+	\listoftables
+	
+	\ \\[2cm]
+
+Seguramente lo habrás aprendido en la escuela primaria: la Tierra describe una órbita elíptica alrededor del Sol.
+
+Este recorrido, que se conoce como movimiento de traslación, le toma al planeta unos 365 días 
+(más 5 horas, 45 minutos y 46 segundos).
+
+El otro movimiento que te enseñaron es el de rotación: la Tierra gira en torno a su propio eje.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=5cm]{uni}
+\caption{EL escudo oficial de la UNI}\label{fig1}
+\end{figure}
+
+En la Figura \ref{fig1} tenemos el escudo de la UNI...
+
+\begin{enumerate}
+\item naranjas
+\item peras
+\begin{enumerate}
+	\item naranjas
+	\item peras
+	\item manzanas
+	\begin{enumerate}
+		\item naranjas
+		\item peras
+		\item manzanas
+		\item nísperos
+		\begin{enumerate}
+			\item naranjas
+			\item peras
+			\item manzanas
+			\item nísperos
+		\end{enumerate}
+	\end{enumerate}
+	\item nísperos
+\end{enumerate}
+\item manzanas
+\item nísperos
+\end{enumerate}
+
+\begin{itemize}
+	\item naranjas
+\item peras
+\item manzanas
+\begin{itemize}
+	\item naranjas
+	\item peras
+	\item manzanas
+	\item nísperos\footnote{fruta que no conozco}
+\end{itemize}
+\item nísperos
+\end{itemize}
+
+\begin{description}
+\item[PALABRA1] Seguramente lo habrás aprendido en la escuela primaria: la Tierra describe una órbita elíptica alrededor del Sol.
+
+\item[TEXTO2] Seguramente lo habrás aprendido en la escuela primaria: la Tierra describe\footnote{esto es un pie de página}
+\end{description}
+
+\begin{tabular}{rcll}
+naranja & pera & manzana & níspero \\
+naranja2 & pera2 & manzana2 & níspero2 \\
+naranja3 & pera3 & manzana3 & níspero3 \\
+\end{tabular}
+
+\ \\[1cm]
+
+\begin{tabular}{|r|c|l|l|}
+	naranja & pera & manzana & níspero \\
+	naranja2 & pera2 & manzana2 & níspero2 \\
+	naranja3 & pera3 & manzana3 & níspero3 \\
+\end{tabular}
+
+\ \\[1cm]
+
+\begin{tabular}{rcll}
+	\hline
+	naranja & pera & manzana & níspero \\
+	\hline
+	naranja2 & pera2 & manzana2 & níspero2 \\
+	\hline
+	naranja3 & pera3 & manzana3 & níspero3 \\
+	\hline
+\end{tabular}
+
+\ \\[1cm]
+
+\begin{table}[H]
+	\centering
+\caption{Esta es mi primera tabla flotante}
+\begin{tabular}{|r|c|l|p{3cm}|}
+	\hline
+	naranja & \multicolumn{2}{c|}{PALABRA} & níspero \\
+	\hline
+	naranja2 & pera2 & manzana2 & níspero2 \\
+	\cline{3-4}
+	naranja3 & pera3 & manzana3 & níspero3 \\
+	\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\caption{Este es mi flotante 2}\label{tab1}
+	\begin{tabular}{|r|c|l|p{3cm}|}
+		\hline
+		naranja & \multicolumn{2}{c|}{PALABRA} & níspero \\
+		\hline
+	\end{tabular}
+\end{table}
+
+En la Tabla \ref{tab1} tenemos... 
+
+Pero aprendí integración en \cite{ven14} y del sol en \cite[cap. 5]{smi18}
+
+\begin{thebibliography}{99}
+\bibitem{ven14} Venero, Armando. \emph{Análisis Matemático 2}. Gemar, 2014.
+
+\bibitem{smi18} Smith, John. \emph{Acerca del sol}. Juntos, 2018.
+\end{thebibliography}
+
+\rule{5cm}{1mm}
+
+\rule{2cm}{2cm}
+
+\fbox{esto está encerrado}
+
+\setlength{\fboxrule}{1mm}
+\fbox{esto está encerrado}
+
+\fbox{texto}
+
+\setlength{\fboxsep}{6mm}
+
+\fbox{esto está encerrado}
+
+\setlength{\fboxrule}{0.4pt}
+\setlength{\fboxsep}{3pt}
+\fbox{esto está encerrado}
+
+\fbox{\parbox{7cm}{Seguramente lo habrás aprendido en la escuela primaria: la Tierra describe una órbita elíptica alrededor del Sol. Seguramente lo habrás aprendido en la escuela primaria: la Tierra describe una órbita elíptica alrededor del Sol. Seguramente lo habrás aprendido en la escuela primaria: la Tierra describe una órbita elíptica alrededor del Sol.}}
+
+\ \\[1cm]
+
+\begin{minipage}{7cm}
+Seguramente lo habrás aprendido en la escuela primaria: la Tierra describe una órbita elíptica alrededor del Sol. Seguramente lo habrás aprendido en la escuela primaria: la Tierra describe una órbita elíptica alrededor del Sol. Seguramente lo habrás aprendido en la escuela primaria: la Tierra describe una órbita elíptica alrededor del Sol.	
+\end{minipage}
+
+\ \\[1cm]
+
+texto1 \raisebox{-2mm}{texto2} \raisebox{2mm}{texto3} texto4
+
+\vfill
+
+hola, estoy en la página \arabic{page} del cap. \Roman{chapter}, \thepage \hfill mundo
+
+nombre:\hrulefill
+
+apellido:\dotfill
+
+\newpage
+
+\begin{titlepage}
+\centering\bfseries
+{\Large UNIVERSIDAD NACIONAL DE INGENIERÍA\\[5mm]
+
+FACULTAD DE CIENCIAS\\[5mm]
+
+ESCUELA PROFESIONAL DE CIENCIAS}\\[8mm]
+
+\includegraphics[width=5cm]{uni}\\[8mm]
+
+{\large Trabajo presentado por:}\\[5mm]
+
+{\Huge Juan Pérez}\\[8mm]
+
+{\large Asesor:}\\[5mm]
+
+{\Huge  John Smith}\\[8mm]
+
+{\LARGE UNI--Lima\\[5mm]
+
+2019}
+\end{titlepage}
+
+\end{document}

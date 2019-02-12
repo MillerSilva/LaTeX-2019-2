@@ -1,0 +1,396 @@
+\documentclass{report}
+\usepackage{color}
+
+\newenvironment{impo}{\begin{center}		\sffamily\bfseries\color{blue}}{\end{center}}
+
+
+
+%\usepackage[intlimits,leqno]{amsmath}
+\usepackage{amsmath}
+\numberwithin{equation}{section}
+
+\DeclareMathOperator{\sen}{sen}
+
+\DeclareMathOperator*{\algo}{algo}
+
+
+\usepackage{amssymb}
+
+\usepackage{showframe}
+
+\usepackage{amsthm}
+
+\newtheorem{eje}{Ejemplo}
+\theoremstyle{definition}
+\newtheorem*{cor}{Corolario}
+\newtheorem{teo}{Teorema}[section]
+\swapnumbers
+\newtheorem{prop}{Proposición}[chapter]
+\theoremstyle{remark}
+\newtheorem{enun}[prop]{Enunciado}
+
+\renewcommand{\proofname}{\upshape{\bfseries Prueba}}
+
+\renewcommand{\qedsymbol}{$\heartsuit$}
+
+\begin{document}
+\chapter{teoremas}
+\section{parte uno}
+	
+\begin{cor}
+	esto es un corolario
+\end{cor}	
+
+\begin{teo}
+	esto es un teorema
+\end{teo}
+\begin{prop}
+esto es una proposición	
+\end{prop}
+\begin{enun}
+enunciando algo	
+\end{enun}
+\begin{prop}
+	esto es una proposición	
+\end{prop}	
+
+\begin{proof}[Demostración]
+	esto es una prueba
+\end{proof}
+
+\begin{proof}
+	otra prueba
+\end{proof}
+	
+	
+$$
+\mathbb{ABCDEFGHIJKLMNOPQRSTUVWXYZ}
+$$	
+
+$$
+\mathfrak{ABCDEFGHIJKLMNOPQRSTUVWXYZ}
+$$
+
+$$
+\bigcup_{i\in I}A_i, A_i\in\mathfrak{D}
+$$
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+texto texto texto $(\begin{smallmatrix} 4 & 5 \\ 7 & 8 \end{smallmatrix})$ texto texto texto texto 	
+$$
+\begin{matrix}
+a & b & cv \\
+5 & 4 & 9 \\
+f & w & w
+\end{matrix}
+$$
+
+$$
+\begin{pmatrix}
+a & b & cv \\
+5 & 4 & 9 \\
+f & w & w
+\end{pmatrix}
+$$
+
+$$
+\begin{bmatrix}
+a & b & cv \\
+5 & 4 & 9 \\
+f & w & w
+\end{bmatrix}
+$$
+
+$$
+\begin{Bmatrix}
+a & b & cv \\
+5 & 4 & 9 \\
+f & w & w
+\end{Bmatrix}
+$$
+
+$$
+\begin{vmatrix}
+a & b & cv \\
+5 & 4 & 9 \\
+f & w & w
+\end{vmatrix}
+$$
+
+$$
+\begin{Vmatrix}
+a & b & cv \\
+5 & 4 & 9 \\
+\hdotsfor{3}
+\end{Vmatrix}
+$$
+
+$$
+\sqrt[\uproot{10}\leftroot{7}n/2]{\frac{1}{\sum\limits_{i=1}^b a_i}}
+$$
+
+$$
+\boxed{a+b=c}
+$$
+
+$$
+\overleftarrow{abc}\quad \underrightarrow{xyz}
+$$
+
+$$
+A\xleftarrow[c]{algo}B
+$$
+
+$$
+\overset{a}{B}\quad \underset{\circ}{D}
+$$	
+
+
+texto texto $\dfrac{a}{b}$ texto $\dbinom{a}{b}$ texto texto $\binom{x}{y}$
+$$
+\tfrac{a}{b}\quad \tbinom{a}{b}
+$$
+
+$$
+\biggl(\sum_{i=1}^n a_i \biggr)
+$$
+
+%\DeclareMathOperator{\sen}{sen}
+$$
+\sen \alpha
+$$
+
+%\DeclareMathOperator*{\algo}{algo}
+$$
+\algo_{x\to 0} x
+$$
+
+$$
+\sum_{\substack{i=1\\i\neq n/2}}^n a_i
+$$
+
+$$
+\sum_{\begin{subarray}{l}i=1\\i\neq n/2\end{subarray}}^n a_i
+$$
+
+$$
+\sideset{_a^b}{_c^d}\sum
+$$
+
+$$
+\int\!\!\int f(x,y)d(x,y)
+$$
+
+$$
+\iint f(x,y)d(x,y)\iiint f\iiiint f\idotsint_{R^n} g
+$$
+
+
+	
+	
+	
+	
+\chapter{Algo de mate}
+\section{primero}
+	
+$$
+\boldsymbol{\alpha} +\alpha
+$$
+
+$$
+\vec{x}=(x_1,x_2,x_3)
+$$
+
+$$
+\boldsymbol{x}-\mathbf{x}=(x_1,x_2,x_3)
+$$
+
+$$
+\pmb{x}x\boldsymbol{x}
+$$
+
+\begin{equation*}
+a+b+c=de
+\end{equation*}
+
+\begin{multline}
+a+b+c+d+a+b+c+d+a+b\\+c+d+a+b+c+d+a+b+c+d+a+\\
+b+c+d+a+b+c+d+a+b+c+d
+\end{multline}
+
+\begin{multline*}
+a+b+c+d+a+b+c+d+a+b\\+c+d+a+b+c+d+a+b+c+d+a+\\
+b+c+d+a+b+c+d+a+b+c+d
+\end{multline*}
+
+\begin{equation}
+\begin{split}
+a+b+c+d+a+b+c+d=\alpha \\
+a+b+c+d+a+b+c+da+b+c+d+a+b+c+d=\beta
+\end{split}
+\end{equation}
+
+\begin{gather}
+a+b+c+d=e \\
+3+4=7 \\
+1=1 \\
+a+b+c+d+a+b+c+a+b+c+d+a+b+c=2
+\end{gather}
+
+\begin{gather*}
+a+b+c+d=e \\
+3+4=7 \\
+1=1 \\
+a+b+c+d+a+b+c+a+b+c+d+a+b+c=2
+\end{gather*}
+
+\begin{align}
+(a+b)^2&=(a+b)(a+b) \\
+ &=a^2+ab+ba+b^2 \\
+ &=a^2+ab+ab+b^2 \\
+ &=a^2+2ab+b^2
+\end{align}
+
+\begin{align}
+a+3&=fr &  j+2&=444 \\
+1&=2 & 32&=4+5
+\end{align}
+
+\begin{align*}
+a+3&=fr &  j+2&=444 \\
+1&=2 & 32&=4+5
+\end{align*}
+
+\begin{flalign}
+a+3&=fr &  j+2&=444 \\
+1&=2 & 32&=4+5
+\end{flalign}
+
+\begin{flalign*}
+a+3&=fr &  j+2&=444 \\
+1&=2 & 32&=4+5
+\end{flalign*}
+
+\begin{align}
+\label{ec1}(a+b)^2&=(a+b)(a+b) \\
+&=a^2+ab+ba+b^2 \notag\\
+&=a^2+ab+ab+b^2 \notag\\
+\label{ec2}&=a^2+2ab+b^2
+\end{align}
+
+En las ecuaciones (\ref{ec1}) y (\ref{ec2}) tenemos...
+
+\section{segundo}
+\begin{equation}
+a+3=5 \tag{ecuación de Maxwell}
+\end{equation}
+
+\begin{equation}
+a+3=5 \tag*{ecuación de Maxwell}
+\end{equation}
+
+\begin{equation}
+f(x)=\left\{\begin{aligned}
+x^2+1&=2 \\
+x&=6
+\end{aligned}\right.
+\end{equation}
+
+\begin{equation}
+f(x)=\left\{\begin{gathered}
+x^2+1=2 \\
+x=6
+\end{gathered}\right.
+\end{equation}
+
+\begin{equation}
+f(x)=\begin{cases}
+x^2 & x\in X \\
+x^3 & x\in Y
+\end{cases}
+\end{equation}
+
+\chapter{continuación de mate}
+
+$$
+f(x)=g(x)\mbox{ cuando }x\in X
+$$
+
+$$
+f(x)=g(x)\text{ cuando }x\in X
+$$
+
+$$
+Cl_{\mbox{ácido}}+ H_{\mbox{acuoso}}=--- 
+$$
+
+$$
+Cl_{\text{ácido}}+ H_{\text{acuoso}}=--- 
+$$
+
+\begin{align}
+x+y&=5643562345 \\
+x&=456345634 \\
+\intertext{Por lo tanto}
+y&=57567354
+\end{align}
+
+ecuación (\ref{ec1})  y ecuación \eqref{ec1}
+
+
+
+
+
+
+
+\newpage	
+	
+\begin{equation}
+a+b+c=d
+\end{equation}
+	
+$$
+\int_a^b f(x)dx = g(\tilde{x})
+$$
+	
+\begin{eje}
+	esto es un ejemplo
+\end{eje}
+
+\begin{eje}
+	otro ejemplo
+\end{eje}
+	
+	
+	
+	
+	
+	
+	
+	
+\begin{center}
+	\sffamily\bfseries\color{blue} algo
+\end{center}
+
+texto texto	
+
+\begin{impo}
+	algo2 algo2
+\end{impo}
+
+\cite{*}
+\bibliographystyle{acm}
+\bibliography{biblio}
+	
+	
+\end{document}

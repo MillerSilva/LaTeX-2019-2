@@ -1,0 +1,477 @@
+\documentclass{report}
+\usepackage[utf8]{inputenc}
+%%%\usepackage{color}
+%\usepackage{showframe}
+\usepackage{rotfloat}
+
+\usepackage{caption}
+\captionsetup[figure]{format=hang,labelformat=parens,labelfont={Large,color=blue},margin=2cm}
+%\captionsetup[table]{indention=4cm,labelsep=endash}
+\captionsetup[table]{labelsep=endash,justification=centerlast,textfont={footnotesize,color=red},skip=1cm,width=8cm}
+
+\usepackage{diagbox}
+\usepackage{multirow}
+\usepackage{array}
+\setlength{\extrarowheight}{2mm}
+\usepackage[svgnames,table]{xcolor}
+\definecolor{micolor}{RGB}{255,255,255}
+
+\usepackage{hhline}
+\usepackage{longtable}
+
+\usepackage{bm}
+\usepackage{eucal}
+\usepackage{mathrsfs}
+\usepackage{dsfont}
+
+\usepackage{empheq}
+
+\usepackage{mathtools}
+
+%\usepackage[linktocpage=true]{hyperref}
+%\usepackage[colorlinks=true,urlcolor=blue,bookmarks=false,pdfstartview=FitH]{hyperref}
+\usepackage[colorlinks=true,urlcolor=blue,pdfstartview=FitH]{hyperref}
+%\usepackage{apacite}	
+	
+\begin{document}
+	
+\tableofcontents
+	
+\chapter{Algo de mate \texorpdfstring{$\int f$}{-integración}}
+\hyperlink{aa}{al final}
+
+\href{https://www.google.com/}{mi buscador favorito}
+
+\ \\
+
+\url{https://www.google.com.pe/search?ei=NY9bXMn6Fuup5wL3uILQBg&q=RGB&oq=RGB&gs_l=psy-ab.3..35i39j0i67l3j0l6.13980.16787..17930...0.0..0.157.699.0j5......0....1..gws-wiz.......0i71j0i13j0i13i30.Ue8U45wg7-Y}
+	
+$$
+\sum_{i=3452345234523}^n a_i
+$$
+$$
+\sum_{\mathclap{i=3452345234523}}^n a_i
+$$
+
+$$
+\xleftrightarrow[p+q]{a+b+d+cd}
+$$
+$$
+\xLeftrightarrow[p+q]{a+b+d+cd}
+$$
+
+$$
+\underbracket[1pt][1cm]{3+3+3+3}_{=12}
+$$
+
+$$
+\begin{pmatrix}
+3 & 4 & 3 \\
+1 & -1 & 0
+\end{pmatrix}
+$$
+
+$$
+\begin{pmatrix*}[r]
+3 & 4 & 3 \\
+1 & -1 & 0
+\end{pmatrix*}
+$$
+\begin{align*}
+a+b&=d \\
+\Aboxed{5&=4}
+\end{align*}
+	
+\begin{empheq}[right=\Leftarrow,left=\Rightarrow,outerbox=\colorbox{yellow}]{align}
+a+b+c&=d \\
+5+7&=12
+\end{empheq}
+
+	
+\begin{empheq}[right=\Leftarrow,left=\Rightarrow,innerbox=\colorbox{yellow}]{align}
+a+b+c&=d \\
+5+7&=12
+\end{empheq}
+	
+	
+\begin{empheq}[box=\colorbox{green}]{align}
+a+b+c&=d \\
+5+7&=12
+\end{empheq}	
+	
+	
+$$\alpha+\sum+\bm{\alpha+\sum}$$	
+
+$$
+\mathcal{ABCDEFGHIJKLMNOPEQRSTUVWXYZ}
+$$
+
+$$
+\mathscr{ABCDEFGHIJKLMNOPEQRSTUVWXYZ}
+$$
+
+$$
+\mathds{ABCDEFGHIJKLMNOPEQRSTUVWXYZ}
+$$
+
+$n\in\mathds{N},\mathds{R},\mathds{C}$
+	
+\chapter{algo de tablas}	
+\section{tablas grandes}	
+	
+\begin{longtable}{|c|c|c|}
+	\caption{Esto es una tabla grande}\\
+	ARÁNDANOS & MANZANA & MANGOS \\
+	\endfirsthead
+	fruta 1 & fruta 2 &  fruta 3\\
+	\endhead
+	\multicolumn{3}{r}{continúa...} \\
+	\endfoot
+	\multicolumn{3}{r}{fin} \\
+	\endlastfoot
+	\hline
+	arándanos & manzana & mangos \\
+	\hline
+	arándanos & manzana & mangos \\
+	arándanos & manzana & mangos \\
+	\hline
+		\hline
+	arándanos & manzana & mangos \\
+	\hline
+	arándanos & manzana & mangos \\
+	arándanos & manzana & mangos \\
+	\hline
+		\hline
+	arándanos & manzana & mangos \\
+	\hline
+	arándanos & manzana & mangos \\
+	arándanos & manzana & mangos \\
+	\hline
+		\hline
+	arándanos & manzana & mangos \\
+	\hline
+	arándanos & manzana & mangos \\
+	arándanos & manzana & mangos \\
+	\hline
+		\hline
+	arándanos & manzana & mangos \\
+	\hline
+	arándanos & manzana & mangos \\
+	arándanos & manzana & mangos \\
+	\hline
+		\hline
+	arándanos & manzana & mangos \\
+	\hline
+	arándanos & manzana & mangos \\
+	arándanos & manzana & mangos \\
+	\hline
+		\hline
+	arándanos & manzana & mangos \\
+	\hline
+	arándanos & manzana & mangos \\
+	arándanos & manzana & mangos \\
+	\hline
+		\hline
+	arándanos & manzana & mangos \\
+	\hline
+	arándanos & manzana & mangos \\
+	arándanos & manzana & mangos \\
+	\hline
+		\hline
+	arándanos & manzana & mangos \\
+	\hline
+	arándanos & manzana & mangos \\
+	arándanos & manzana & mangos \\
+	\hline
+		\hline
+	arándanos & manzana & mangos \\
+	\hline
+	arándanos & manzana & mangos \\
+	arándanos & manzana & mangos \\
+	\hline
+		\hline
+	arándanos & manzana & mangos \\
+	\hline
+	arándanos & manzana & mangos \\
+	arándanos & manzana & mangos \\
+	\hline
+		\hline
+	arándanos & manzana & mangos \\
+	\hline
+	arándanos & manzana & mangos \\
+	arándanos & manzana & mangos \\
+	\hline
+		\hline
+	arándanos & manzana & mangos \\
+	\hline
+	arándanos & manzana & mangos \\
+	arándanos & manzana & mangos \\
+	\hline
+		\hline
+	arándanos & manzana & mangos \\
+	\hline
+	arándanos & manzana & mangos \\
+	arándanos & manzana & mangos \\
+	\hline
+	\\
+	\hline
+	arándanos & manzana & mangos \\
+	\hline
+	arándanos & manzana & mangos \\
+	arándanos & manzana & mangos \\
+	\hline
+		arándanos & manzana & mangos \\
+	\hline
+	arándanos & manzana & mangos \\
+	arándanos & manzana & mangos \\
+	\hline
+	\hline
+	arándanos & manzana & mangos \\
+	\hline
+	arándanos & manzana & mangos \\
+	arándanos & manzana & mangos \\
+	\hline
+	\hline
+	arándanos & manzana & mangos \\
+	\hline
+	arándanos & manzana & mangos \\
+	arándanos & manzana & mangos \\
+	\hline
+	\hline
+	arándanos & manzana & mangos \\
+	\hline
+	arándanos & manzana & mangos \\
+	arándanos & manzana & mangos \\
+	\hline
+	\hline
+	arándanos & manzana & mangos \\
+	\hline
+	arándanos & manzana & mangos \\
+	arándanos & manzana & mangos \\
+	\hline
+	\hline
+	arándanos & manzana & mangos \\
+	\hline
+	arándanos & manzana & mangos \\
+	arándanos & manzana & mangos \\
+	\hline
+\end{longtable}
+
+\ \\[1cm]	
+	
+	
+	
+	
+	
+	
+	
+	
+\section{tablas}	
+	
+	
+	
+	
+	
+	
+	
+	
+\begin{tabular}{|c|c|c|}
+	\hline
+\rowcolor{green}	 & manzana & mangos \\
+\hhline{|>{\arrayrulecolor{green}}->{\arrayrulecolor{black}}|-|-|}
+\rowcolor{green} \multirow{-2}{*}{FRUTA}	 & manzana & mangos \\
+	arándanos & manzana & mangos \\
+	\hline
+\end{tabular}
+
+\begin{table}[H]
+\rowcolors{3}{yellow!40}{green!20}
+\begin{tabular}{|c|c|c|}
+	\hline
+	arándanos & manzana & mangos \\
+	\hline
+	arándanos & manzana & mangos \\
+	arándanos & manzana & mangos \\
+	\hline
+		arándanos & manzana & mangos \\
+	\hline
+	arándanos & manzana & mangos \\
+	arándanos & manzana & mangos \\
+	\hline
+		arándanos & manzana & mangos \\
+	\hline
+	arándanos & manzana & mangos \\
+	arándanos & manzana & mangos \\
+	\hline
+		arándanos & manzana & mangos \\
+	\hline
+	arándanos & manzana & mangos \\
+	arándanos & manzana & mangos \\
+	\hline
+		arándanos & manzana & mangos \\
+	\hline
+	arándanos & manzana & mangos \\
+	arándanos & manzana & mangos \\
+	\hline
+		arándanos & manzana & mangos \\
+	\hline
+	arándanos & manzana & mangos \\
+	arándanos & manzana & mangos \\
+	\hline
+\end{tabular}
+\end{table}
+
+\ \\[1cm]
+	
+
+\arrayrulecolor{blue}
+\doublerulesepcolor{magenta}	
+\begin{tabular}{||c|c|>{\columncolor{Red!20}}c|}
+	\hline
+	arándanos & manzana & mangos \\
+	\hline
+\rowcolor{cyan!40}	arándanos & manzana & mangos \\
+	\cellcolor{yellow}arándanos & manzana & mangos \\
+	\hline
+\end{tabular}
+\arrayrulecolor{black}
+
+\ \\[1cm]
+	
+	
+	
+	
+\newpage	
+\textcolor{micolor}{ALGOALGO}
+	
+{\color{Orchid} texto1}	
+
+\textcolor{Orchid}{texto2}
+
+\colorbox{Orchid}{texto3}
+
+\fcolorbox{red}{yellow}{texto4}
+
+\pagecolor{green}
+	
+{\color[rgb]{0.2,0.5,0.8} PALABRA}
+
+\textcolor{Fuchsia!40}{TEXTO}
+
+\textcolor{Fuchsia!40!Yellow!40}{TEXTO}
+
+\textcolor{-Fuchsia}{TEXTO}
+	
+{\color[RGB]{165,186,28} PALABRA22}
+	
+{\color[RGB]{100,150,200} PALABRA}
+
+\newpage
+\nopagecolor
+	
+	\begin{tabular}{|>{\centering}m{3cm}|m{2.5cm}|>{\centering\arraybackslash}m{3.5cm}|}
+		\hline
+		arándanos & manzana & mangos \\
+		\hline
+		arándanos & manzana & mangos \\
+		arándanos & manzana & mangos \\
+		\hline
+	\end{tabular}
+	
+	\ \\[1cm]
+	
+\begin{tabular}{|>{\bfseries\color{blue}}c|>{$}c<{$}|m{3cm}|}
+	\hline
+	arándanos & \int_a^bf(x)dx & mangos edward, mango kent \\[2mm]
+	\hline
+	arándanos & \sum & mangos \\
+	arándanos & \alpha+\beta & mangos \\
+	\hline
+\end{tabular}
+
+\ \\[1cm]
+	
+\begin{tabular}{|c|c|c|}
+	\hline
+	 & manzana & mangos \\
+	\cline{2-3}
+   \multirow{-2}{*}{FRUTA}	& manzana & mangos \\
+	arándanos & manzana & mangos \\
+	\hline
+\end{tabular}
+
+\ \\[1cm]
+	
+\begin{tabular}{|c|c|c|}
+	\hline
+	\multirow{2}{*}[-0.5mm]{FRUTA} & manzana & mangos \\
+	\cline{2-3}
+	 & manzana & mangos \\
+	arándanos & manzana & mangos \\
+	\hline
+\end{tabular}
+
+\ \\[1cm]
+	
+\begin{tabular}{|c|c|c|}
+	\hline
+	\diagbox[width=5cm,dir=SE]{FRUTA1}{FRUTA2}{frutita} & manzana & mangos \\
+	\hline
+	arándanos & manzana & mangos \\
+	\hline
+	\diagbox[dir=NE,height=2cm]{FRUTA1}{FRUTA2} & manzana & mangos \\
+	\hline
+\end{tabular}
+
+\ \\[1cm]
+	
+\chapter{algo de leyendas}
+
+\begin{tabular}{|c|c|c|}
+\hline
+arándanos & manzana & mangos \\
+\hline
+arándanos & manzana & mangos \\
+arándanos & manzana & mangos \\
+\hline
+\end{tabular}
+
+\ \\[1cm]
+	
+\newpage	
+	
+	
+\begin{table}
+	\centering
+	\caption{esto es una tabla pequeña esto es una tabla pequeña esto es una tabla pequeña esto es una tabla pequeña}
+	\begin{tabular}{ccc}
+		\hline
+		aaa & bbb & ccc \\
+		a & b & c
+	\end{tabular}
+\end{table}
+	
+\begin{sidewaysfigure}
+	\centering
+	\includegraphics[width=8cm]{uni}
+	\caption{esto es una figura esto es una figura esto es una figura}
+\end{sidewaysfigure}
+
+\begin{figure}
+\centering
+\includegraphics[width=4cm]{uni}
+\caption{esto es una figura 2 esto es una figura 2 esto es una figura 2 esto es una figura 2 esto es una figura 2 esto es una figura 2 esto es una figura 2 esto es una figura 2 esto es una figura 2 esto es una figura 2 esto es una figura 2 esto es una figura 2}
+\end{figure}
+
+\begin{sidewaystable}
+	\centering
+\caption{esto es una tabla grande esto es una tabla grande esto es una tabla grande}
+	\begin{tabular}{*{12}{c}}
+		aaa & bbb & ccc & aaa & bbb & ccc &aaa & bbb & ccc &aaa & bbb & ccc  \\
+		aaa & bbb & ccc & aaa & bbb & ccc &aaa & bbb & ccc &aaa & bbb & ccc  \\
+	\end{tabular}
+\end{sidewaystable}
+
+\hypertarget{aa}{final}
+
+\end{document}

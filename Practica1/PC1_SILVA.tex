@@ -1,0 +1,247 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-sloppy]{babel}
+\usepackage[lmargin=2.5cm,rmargin=2cm,tmargin=2.5cm,bmargin=2cm]{geometry}
+\linespread{1.5}
+
+\usepackage{amsmath}
+%\numberwithin{equation}{(1)}
+
+\newcommand{\icis}{{\textstyle\int\limits_0^\infty}w_te^{-rt}dt}
+\newcommand{\suma}{(1-\alpha + \gamma)}
+\newcommand{\fphi}{\frac{\suma (1-u)\phi}{(1-\alpha)}}
+\title{\textbf{Crecimiento económico y capital humano: metodología para la simulación de una variante del Modelo de Lucas con aplicación a México}\vspace{-0.5cm}}
+\author{\LARGE\textbf{Alejandro Rodríguez Arana*}\\\textsl{Universidad Iberoamericana, Ciudad de México, Departamento de Economía}}
+\date{}
+
+%\usepackage{picins}
+\usepackage{here}
+\usepackage{hhline}
+\usepackage{multirow}
+\usepackage{pdflscape}
+\newcommand{\saltoline}{\\[-5mm]}
+\newcommand{\saltito}{\\[-3mm]}
+\usepackage{array}
+\usepackage{listings}
+
+\begin{document}
+	\maketitle
+	
+	\begin{abstract}
+		Este trabajo tiene como principal objetivo plantear una variante del modelo de crecimiento de Lucas (1988) que pueda fácilmente ser sujeta a ejercicios de calibración y simulación. Un segundo objetivo es calibrar y simular el modelo propuesto para el caso de México. Para lograr lo anterior, se parte del modelo general de Lucas (1988) y de la estructura de ahorro-inversión propuesta por Solow (1956, 1957). El ejercico de calibración-simulación para México muestra que aumentar el precio del producto per cápita en este país en sólo unas décimas requiere un esfuerzo de ahorro adicional difícil de generar en los proximos años, por lo cual es posible que el creciemiento del futuro cercano siga siendo bajo. La metodología propuesta puede generar un sesgo donde el crecimiento depende en exceso de la trayectoria de capital humano, eso sucede en modelos del tipo de Lucas (1988, 2009). Sin embargo, las formas reducidas del modelo planteado pueden calibrarse y simularse con relativa facilidad para la mayoría de los paises que tienen información de bases de datos públicas, como en la Penn World Table.
+	\end{abstract}
+	\setcounter{chapter}{2}
+	\chapter{El modelo de crecimiento básico}
+	El modelo parte de una función producción de bienes y servicios no educativos para una empresa típica. Esta función se basa en la propuesta por Lucas (1988):
+	\begin{equation}\label{ecu1}
+		Y_t=K_t^\alpha(uh_tL_{bt})^{1-\alpha}H_t^\gamma
+	\end{equation}
+	Donde  \\
+	\hspace*{0.7cm}$Y$: Producto total\\
+	\hspace*{0.7cm}$K$: Capital físico\\
+	\hspace*{0.7cm}$L_b$: Número de trabajadores en el sector productor de bienes y servicios no educativos .\\
+	\hspace*{0.7cm}$h$: Capital humano dentro de la empresa\\ 
+	\hspace*{0.7cm}$H$: Capital humano de la economía\\
+	\hspace*{0.7cm}$u$: porcentaje del tiempo dedicado al trabajo en relación al tiempo total para estudiar y trabajar\\ 
+	\hspace*{0.7cm}$\alpha$ está entre $0$ y $1$\\
+	\hspace*{0.7cm}$\gamma\geq 0$ \\
+	La función de producción depende de los factores tradicionales: capital físico y trabajo. El factor que mide la productividad del trabajo es $uh$, donde $u$ es el tiempo que los trabajadres le dedican efectivamente al trabajo en la empresa y $h$ es el acervo del capital humano que poseen. La función de producción considera la llamada externalidad de Lucas (1988) (el parámetro $\gamma$ de la función producción), por la cual el acervo de capital humano de todas las empresas de la economía tiene un efecto positivo sobre la producción de las empresas en particular.
+	
+	En un mundo con empresas idénticas, o cuando menos muy similares, el capital humano de la economía es proporcional al capital humano de cada empresa. Así que es posible suponer $h=H$ sin pérdida alguna de generalidad.
+	
+	En el sector educativo, la producción del flujo de capital humano que cada individuo obtiene toma la forma propuesta por Lucas (1988), la cual se basa en el trabajo original de Uzawa (1965): 
+	\begin{equation}\label{ecu2}
+		\frac{dh_t}{dt}=(1-u)\phi h_t   
+	\end{equation}
+	
+	El flujo de capital humano individual depende básicamente de tres argumentos: el porcentaje del tiempo que los trabajadores dedican al estudio $1-u$; la calidad de educación, representada por parámetro $\phi$, y el acervo del capital humano $h$. Uzawa (1965) considera que el parámetro $phi$ está directamente relacionado con la razón de personas que trabajan en el sector educativo a las que trabajan en el sector de bienes $(L_e/L_b)$, donde $L_e$ es el número de personas que trabajan en el sector educativo. Lucas (1988) deja más libre el parámetro, de manera que además de incluir esa razón puede incluir otros factores, como los materiales de estudio y las tecnologías de aprendizaje, entre otros.
+	
+	\addtocounter{footnote}{10}
+	
+	En términos per cápita, la función producción de bienes puede expresarse como\footnote{En este caso se dividió la función producción por $L_b$, pero si $L_e/L_b$ es constante eso cualitativamente no afecta los resultados del modelo.}
+	\begin{equation}\label{ecu3}
+		y_t=k_t^\alpha(uh_t)^{(1-\alpha)}h_t^\gamma
+	\end{equation}\\
+	$y:$ Producto per cápita$(Y/L)$\\
+	$k:$ Capital per cápita $(K/L)$\\
+	Asimismo, la acumulación del capital per cápita que surge del modelo original de Solow (Solow (1956),(1957)) se define como:
+	\begin{equation}\label{ecu4}
+		\frac{(dk_t)}{dt}=sy_t-(\eta + \delta)k_t=sk_t^\alpha (uh_t)^{(1-\alpha)}h_t^\gamma - (\eta+\delta)k_t
+	\end{equation}
+	Donde $s$ es la tasa de ahorro de la economía, la cual se supone constante, $\eta$ es la tasa de crecimiento de la población y $\alpha$ es la tasa de depreciación del capital físico. Cuando el ahorro per cápita, representado por el término $sy$, es mayor que la depreciación del capital per cápita $(\eta +\delta )k$, el capital per cápita aumenta $(dk/dt>0)$.
+	
+	Sustituyendo \ref{ecu3} en \ref{ecu4} y dividiendo toda la ecuación entre el capital per cápita, se obtiene.
+	\begin{equation}\label{ecu5}
+		\frac{dk_t}{dt}\frac{1}{k_t}=g_{kt}=\frac{s(uh_t)^{1-\alpha}h_t^\gamma}{k_t^{1-\alpha}}-(\eta + \delta)
+	\end{equation}
+	\begin{equation*}
+		\frac{(dg_{kt})}{dt}<0
+	\end{equation*}
+	Donde $g_{k}$ es la tasa de crecimiento del capital per cápita
+	
+	Dado que la derivada del crecimiento del capital per cápita respecto al nivel de la misma variable es negativa, la ecuación diferencial \ref{ecu5} converge a un nivel de crecimiento estable  del capital per cápita. Dicho crecimiento puede obtenerse igualando la tasa de crecimiento del numerador del cociente del primer término del lado derecho de la ecuación \ref{ecu5} con la tasa de crecimiento del denominador de dicho término, en cuyo caso y suponiendo que $u$ es constante, se obtiene :\footnote{Para obtener la tasa de crecimiento del numerador y denominador del primer término del lado derecho de la ecuación (\ref{ecu5}), se toman los logaritmos de dichos términos y luego se derivan con respecto al tiempo. Como $s$ y $u$ se suponen constantes, los cambios de los logaritmos de esas variables en el tiempo son cero.}
+	\begin{equation}\label{ecu6}
+		(1-\alpha + \gamma)g_h=(1-\alpha)g_k
+	\end{equation}
+	Siendo $g_h$ la tasa de crecimiento del capital humano.
+	
+	La tasa de crecimiento de capital humano puede obtenerse dividiendo la ecuación \ref{ecu2} por el acervo de capital humano. El resultado de esta operación es
+	\begin{equation}\label{ecu7}
+		g_h=\frac{dh_t}{dt}\frac{1}{h_t}=(1-u)\phi
+	\end{equation}
+	Si $u$ y $\phi$ son constantes, entonces la tasa de crecimiento de capital humano es también constante.
+	
+	De aquí se por \ref{ecu6} y \ref{ecu7}, se obtiene que
+	\begin{equation}\label{ecu8}
+		g_k=\frac{(1-\alpha +\gamma)}{(1-\alpha)}(1-u)\phi
+	\end{equation}
+	
+	La ecuación \ref{ecu8} muestra que el crecimiento del capital per cápita es proporcional al crecimiento del capital humano. El valor de la proporción sería exactamente igual a la unidad si la externalidad de Lucas fuera a cero y mayor a uno si la externalidad realmente ocurre (es positiva).
+	
+	Obteniendo logaritmos de la función producción \ref{ecu3} y derivando esos logaritmos 
+	\begin{equation}\label{ecu9}
+		g_y=\alpha g_k + (1-\alpha +\gamma)g_h
+	\end{equation}
+	
+	Sustituyendo \ref{ecu7} y \ref{ecu8}
+	\begin{equation}\label{ecu10}
+		g_y=\alpha\frac{(1-\alpha +\gamma)}{(1-\alpha)}g_h + \frac{(1-\alpha + \gamma)(1-\alpha)}{(1-\alpha)}g_h=\frac{(1-\alpha + \gamma)}{(1-\alpha)}(1-u)\phi=g_k
+	\end{equation}
+	En largo plazo, tanto el capital per cápita como el producto per cápita crecen a la tasa que muestra el lado derecho de la ecuación \ref{ecu8}. Sin embargo, aun cuando se suponga que esa tasa es constante, no es posible saber cuál es su magnitud, pues tanto el modelo de Uzawa (1965), como en el de Lucas (1988), el porcentaje del tiempo dedicado al estudio $(1-u)$, y por lo tanto también al trabajo, son variables endógenas. La tarea entonces determinar una ecuación para el parámetro $u$ y de ahí definir cuál es la tasa de crecimiento del producto per cápita de equilibrio de largo plazo.
+	
+	\chapter{La determinación del porcentaje de tiempo dedicado al trabajo y al estudio} 
+	Los productores del sector de bienes maximizan beneficios. La función de beneficios es:
+	\begin{equation}\label{ecu11}
+		K_t^\alpha (uh_tL_t)^{1-\alpha}h_t^\gamma -w_tL_{bt}-(r_t + \delta)K_t
+	\end{equation}
+	
+	La maximización de esta función con respecto al capital físico y al trabajo $(KyL_b)$ implica que el producto marginal de los factores es igual al costo marginal de los factores:
+	\begin{equation}\label{ecu12}
+		r_t + \gamma=\alpha K_t^{\alpha -1}(uh_tL_t)^{1-\alpha}h_t^\gamma=\alpha k_t^{\alpha -1}(uh_t)^{1-\alpha}h_t^\gamma
+	\end{equation}
+	\begin{equation}\label{ecu13}
+		w_t=(1-\alpha)K_t^\alpha(uh_tL_t)^{-\alpha}(uh_t)h_t^\gamma=(1-\alpha)k_t^\alpha u^{1-\alpha}h_t^{1-\alpha+\gamma}
+	\end{equation}
+	La ecuación \ref{ecu12} muestra que la productividad marginal del capital, que es la derivada de la función producción \ref{ecu1} con respecto al capital físico, es igual al costo marginal del capital, el cual se representa por la suma del rendimiento del capital $(r)$ y la tasa de depreciación del mismo. Por su parte, la ecuación \ref{ecu13} muestra que el salario real $(w)$ es igual al producto marginal del trabajo , al cual, a su vez, depende positivamente del capital per cápita, del porcentaje del tiempo dedicado al trabajo y del capital humano.
+	
+	\addtocounter{footnote}{12}
+	
+	Para calcular $u$ suponiendo un estado estacionario permanente, o en vecindades muy cercanas a dicho estado, utilizamos los resultados de las ecuaciones \ref{ecu7} y \ref{ecu8}, que implican que en el estado estacionario el capital físico per cápita y el capital humano crecen a las tasas señaladas por estas ecuaciones, de modo que las trayectorias del capital físico per cápita y el capital humano por individuo pueden definirse como:\footnote{Hay que señalar que de acuerdo a los supuestos de este trabajo el crecimiento del capital humano individual toma el valor señalado en la ecuación \ref{ecu7} en todo momento del tiempo. Independientemente de si el capital físico per cápita está o no en su trayectoria de largo plazo.}
+	\begin{equation}\label{ecu14}
+		k_t=k(0)e^{\fphi t}
+	\end{equation}
+	\begin{equation}\label{ecu15}
+		h_t=h(0)e^{(1-u)\phi t}
+	\end{equation}
+	Sustituyendo estas ecuaciones en la ecuación (13)
+	\begin{equation}\label{ecu16}
+		w_t=(1-\alpha)u^{1-\alpha}(k(0)e^{\fphi t})^\alpha(h(0)e^{(1-u)\phi t})^{\suma}
+	\end{equation}
+	
+	Esta expresión muestra que el porcentaje del tiempo dedicado al trabajo tiene dos efectos contrarios en el salario real a lo largo del tiempo: en el presente, un mayor porcentaje del tiempo dedicado al trabajo (mayor nivel de $u$) propicia un salario mayor. Sin embargo, conforme pasa el tiempo un mayor tiempo dedicado al estudio y un menor tiempo dedicado al trabajo aumenta el capital físico y el humano, y eso genera mayores pagos al trabajo. Lo anterior sugiere que hay un porcentaje óptimo de horas dedicado al trabajo, con el remanente dedicado al estudio.
+	
+	La ecuación (14) se puede expresar como
+	\begin{equation}\label{ecu17}
+		w_t=(1-\alpha)k_0^\alpha h_0^{1-\alpha +\gamma}u^{1-\alpha}e^{\frac{(1-\alpha + \gamma)}{(1-\alpha)}(1-u)\phi t}
+	\end{equation} 
+	Los trabajadores desean maximizar el valor presente de sus pagos salariales.\\
+	Supondremos para ello una tasa de interés constante de equilibrio en el estado estacionario. También se hará el supuesto de un horizonte infinito de tiempo.
+	De este modo, la función a maximizar es:
+	\begin{equation}\label{ecu18}
+		Max\icis
+	\end{equation}
+	Utilizando las ecuaciones (15) y (17) esta integral se expresa como 
+	\begin{equation}\label{ecu19}
+		\icis =(1-\alpha)k_0^\alpha h_0^{1-\alpha + \gamma} u^{1-\gamma}\int\limits_0^\infty e^{-(r-\fphi)t}
+	\end{equation}
+	La misma integral puede expresarse como
+	\begin{equation}\label{ecu20}
+		\icis=-\frac{(1-\alpha)k_0^\alpha h_0^{1-\alpha + \gamma}u^{1-\alpha}}{(r-\fphi)}\int\limits_0^\in
+		fty e^{-(r-\fphi)t}
+	\end{equation}
+	$$(-(r-\fphi))dt$$
+	La solución de la integral es
+	\begin{equation}\label{ecu21}
+		\icis =-\frac{(1-\alpha)k_0^\alpha h_0^{1-\alpha + \gamma} u^{1-\alpha}}{(r-\fphi)} e^{-(r-\fphi)t}
+	\end{equation}
+	La cual hay que evaluarla entre cero e infinito.
+	
+	Para que la integral converja, es necesario que
+	\begin{equation}\label{ecu22}
+		r-\fphi >0
+	\end{equation}
+	
+	Esto implica claramente que la convergencia de la integral requiere que el rendimiento del capital sea mayor que la tasa de crecimiento del PBI per cápita, ya que el término que se está sustrayendo es efectivamente ese crecimiento (ver ecuación (8)). Recientemente, a raíz del trabajo de Piketty (2013), se ha generado una polémica sobre el tema del signo de la resta entre el rendimiento del capital y el crecimiento. En una gran cantidad de módelos económicos la desigualdad (22) es necesario para la existencia de la solución del modelo. Solo en casos como el modelo de Diamond (1965) (ver D. Romer (2006 capítulo 2 parte B)) puede ocurrir, aunque no necesariamente ocurre, lo contrario.
+	
+	Si efectivamente la integral converge
+	\begin{equation}\label{ecu23}
+		j=\icis =\frac{(1-\alpha)k_0^\alpha h_0^{1-\alpha + \gamma}u^{1-\alpha}}{(r-\fphi)}
+	\end{equation}
+	
+	Esta ecuación también se puede expresar como 
+	\begin{equation}\label{ecu24}
+		j=\frac{zu^{1-\alpha}}{\left(r-\fphi \right)} \hspace{1cm}  z=(1-\alpha)k_0^\alpha h_0^{1-\alpha + \gamma}
+	\end{equation}
+	
+	Ahora de lo que se trata es de encontrar el valor de $u$ que maximice esta expresión
+	
+	De aquí que
+	\begin{equation}\label{ecu25}
+		\frac{dj}{du}=\frac{z\left((1-\alpha)u^{-\alpha}\left(r-\fphi\right)-\frac{\suma\phi u^{1-\alpha}}{(1-\alpha)}\right)}{\left(r-\fphi\right)^2}=0
+	\end{equation}
+	Para que esta expresión sea igual a cero el numerador debe ser cero pues el denominador es distinto de cero. Por lo cual
+	\begin{equation}\label{ecu26}
+		(1-\alpha)u^{-\alpha}\left(r-\fphi\right)-\frac{\suma\phi u^{1-\alpha}}{(1-\alpha)}=0
+	\end{equation}
+	Al dividir toda la ecuación por $u^\alpha$ y re arreglar términos se llega a
+	\begin{equation}\label{ecu27}
+		(1-\alpha)r-\suma (1-u)\phi-\frac{\suma\phi u}{(1-\alpha)}=0
+	\end{equation}
+	
+	Ésta es una ecuación lineal en $u$, cuya solución es 
+	\begin{equation}\label{ecu28}
+		u=\frac{(1-\alpha)}{\alpha\suma}\left((1-\alpha)\frac{r}{\phi}-\suma\right)
+	\end{equation}
+	En el caso particular del modelo de Solow, la externalidad de Luca es igual a cero, así que $\gamma=0$. Entonces 
+	\begin{equation}\label{ecu29}
+		u=\frac{(1-\alpha)}{\alpha}\left(\frac{r}{\phi}-1\right)
+	\end{equation}
+	
+	La proporción del tiempo dedicada al trabajo aumenta cuando la tasa de interés aumenta y disminuye cuando la calidad de la educación $\phi$ aumenta. La intuición es clara. Cuando la tasa de interés aumenta, dejar de trabajar de hoy tiene un costo de oportunidad más alto en términos del valor de ahorro perdido. Cuando la calidad de educación aumenta, el salario esperado del futuro es más alto mientras más tiempo se le dedica a la educación, por lo mismo hay incentivos para dedicarle más tiempo a la educación y $u$ disminuye.
+	\begin{center}
+		\vfill{\rule{1cm}{0.5mm}}          
+	\end{center} 
+	\newpage
+	\chapter{Calibración del modelo}
+	En una primera instancia, el modelo se calibró utilizando los datos promedios de la PWT 8.1 entre 2000 y 2011. En este caso se tomaron los datos promediio de las variables $s, \alpha,\eta, \delta$ y $g_h$ y se encontraron como incógnitas $u, \phi$ y $r$ en las ecuaciones (41), (42) y (43). Cabe señalar que el crecimiento promedio observado del PBI per cápita de México entre 2000 y 2011 (0.7 geométrico y 1.1 aritmético) coincide en gran medida con el crecimiento observado promedio del índice de capital humano de la PWT 8.1 (1.0 tanto geométrico como aritmético).\footnote{Por promedio geométrico se entiende tomar la última cifra de la serie(en este caso en 2011), dividirla entre la primera cifra de la serie (en este caso en 2000), elevar ese factor a la razón de 1 entre el número de datos menos uno(en este caso 1/11), restarle 1 y multiplicar todo ese factor por 100. En cambio el promedio aritmético consiste en obtener el promedio simple de los crecimientos anuales de la serie en cuestión.} Lo que es muy congruente con los pronósticos del modelo de Lucas (1988) con externalidad igual a cero $(\gamma=0)$.$^{19}$
+	
+	Los datos que se obtuvieron de la PWT 8.0 y 8.1 y las incógnitas de calidad de la educación, $\phi$, rendimiento del capital $r$ y participación laboral $u$ en las ecuaciones (41) a (44) son los siguientes:
+	
+     	\begin{table}[H]
+     		\caption{Calibración del Modelo Lucas-Solow para el caso de México}\label{t1}
+     		\vspace{0.7cm}
+     		\begin{tabular}{|l|l|}
+     			\hline
+     			\parbox{8cm}{\textbf{Variables obtenidas en la Penn World Table}} & \parbox{8cm}{\textbf{Valores númericos promedio entre 2000 y 2011}} \\ 
+     			\hline
+     			\parbox{8cm}{Participación del capital en el producto (proxy del parámetro $\alpha$)}&0.614\\
+     			\hline
+     			\parbox{8cm}{Relación de inversión a PBI (proxy de la tasa de ahorro s)}& 0.248\\
+     			\hline
+     			\parbox{8cm}{Crecimiento dela serie de capital humano de Barro y Lee (proxy de $g_h$)}&0.01 (1\%)\\
+     			\hline
+     			Tasa de depreciación del capital físico $\delta$ &0.034 (3.4\%)\\
+     			\hline
+     			Tasa de crecimiento de la población $\eta$ &0.013 (1.3\%)\\
+     			\hline
+     			\textbf{Variables calibradas del modelo}&\\
+     			\hline
+     			Calidad de la educación?& 0.048\\
+     			\hline
+     			Tasa de participación en el trabajo $u$&0.789\\
+     			\hline
+     			Tasa de interés o de rendimiento del capital&0.108 (10.8\%)\\
+     			\hline
+     		\end{tabular}
+     	\end{table}
+\end{document}     
