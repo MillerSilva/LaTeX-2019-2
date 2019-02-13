@@ -1,7 +1,7 @@
-\documentclass[12pt,a4paper]{report}
+\documentclass[12pt,notitlepage]{report}
 \usepackage[utf8]{inputenc}
 \usepackage[spanish,es-sloppy]{babel}
-\usepackage[lmargin=2.5cm,rmargin=2cm,tmargin=2.5cm,bmargin=2cm]{geometry}
+\usepackage[a4paper,lmargin=2.5cm,rmargin=2cm,tmargin=2.5cm,bmargin=2cm]{geometry}
 \linespread{1.5}
 
 \usepackage{amsmath}
@@ -13,6 +13,7 @@
 \title{\textbf{Crecimiento económico y capital humano: metodología para la simulación de una variante del Modelo de Lucas con aplicación a México}\vspace{-0.5cm}}
 \author{\LARGE\textbf{Alejandro Rodríguez Arana*}\\\textsl{Universidad Iberoamericana, Ciudad de México, Departamento de Economía}}
 \date{}
+\renewcommand{\abstract}{\noindent\textbf{Resumen}\\}
 
 %\usepackage{picins}
 \usepackage{here}
@@ -23,13 +24,16 @@
 \newcommand{\saltito}{\\[-3mm]}
 \usepackage{array}
 \usepackage{listings}
+\renewcommand{\spanishbibname}{Referencias}
+\renewcommand{\theequation}{\arabic{equation}}
+\usepackage{caption}
 
 \begin{document}
 	\maketitle
-	
 	\begin{abstract}
 		Este trabajo tiene como principal objetivo plantear una variante del modelo de crecimiento de Lucas (1988) que pueda fácilmente ser sujeta a ejercicios de calibración y simulación. Un segundo objetivo es calibrar y simular el modelo propuesto para el caso de México. Para lograr lo anterior, se parte del modelo general de Lucas (1988) y de la estructura de ahorro-inversión propuesta por Solow (1956, 1957). El ejercico de calibración-simulación para México muestra que aumentar el precio del producto per cápita en este país en sólo unas décimas requiere un esfuerzo de ahorro adicional difícil de generar en los proximos años, por lo cual es posible que el creciemiento del futuro cercano siga siendo bajo. La metodología propuesta puede generar un sesgo donde el crecimiento depende en exceso de la trayectoria de capital humano, eso sucede en modelos del tipo de Lucas (1988, 2009). Sin embargo, las formas reducidas del modelo planteado pueden calibrarse y simularse con relativa facilidad para la mayoría de los paises que tienen información de bases de datos públicas, como en la Penn World Table.
 	\end{abstract}
+	\tableofcontents
 	\setcounter{chapter}{2}
 	\chapter{El modelo de crecimiento básico}
 	El modelo parte de una función producción de bienes y servicios no educativos para una empresa típica. Esta función se basa en la propuesta por Lucas (1988):
@@ -213,9 +217,11 @@
 	\end{center} 
 	\newpage
 	\chapter{Calibración del modelo}
+	\addtocounter{footnote}{17}
 	En una primera instancia, el modelo se calibró utilizando los datos promedios de la PWT 8.1 entre 2000 y 2011. En este caso se tomaron los datos promediio de las variables $s, \alpha,\eta, \delta$ y $g_h$ y se encontraron como incógnitas $u, \phi$ y $r$ en las ecuaciones (41), (42) y (43). Cabe señalar que el crecimiento promedio observado del PBI per cápita de México entre 2000 y 2011 (0.7 geométrico y 1.1 aritmético) coincide en gran medida con el crecimiento observado promedio del índice de capital humano de la PWT 8.1 (1.0 tanto geométrico como aritmético).\footnote{Por promedio geométrico se entiende tomar la última cifra de la serie(en este caso en 2011), dividirla entre la primera cifra de la serie (en este caso en 2000), elevar ese factor a la razón de 1 entre el número de datos menos uno(en este caso 1/11), restarle 1 y multiplicar todo ese factor por 100. En cambio el promedio aritmético consiste en obtener el promedio simple de los crecimientos anuales de la serie en cuestión.} Lo que es muy congruente con los pronósticos del modelo de Lucas (1988) con externalidad igual a cero $(\gamma=0)$.$^{19}$
 	
 	Los datos que se obtuvieron de la PWT 8.0 y 8.1 y las incógnitas de calidad de la educación, $\phi$, rendimiento del capital $r$ y participación laboral $u$ en las ecuaciones (41) a (44) son los siguientes:
+	\newpage
 	
      	\begin{table}[H]
      		\caption{Calibración del Modelo Lucas-Solow para el caso de México}\label{t1}
@@ -243,5 +249,11 @@
      			Tasa de interés o de rendimiento del capital&0.108 (10.8\%)\\
      			\hline
      		\end{tabular}
+     		\vspace{0.3cm}
+     		\captionsetup{singlelinecheck=off}
+     		\caption*{Fuente: PWT 8.0 y 8.1 y elaboración propia}
      	\end{table}
+     	\nocite{*}
+     	\bibliography{bibliografia}
+     	\bibliographystyle{apacite*}
 \end{document}     
