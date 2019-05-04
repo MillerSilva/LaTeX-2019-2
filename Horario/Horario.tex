@@ -1,0 +1,41 @@
+\documentclass[12pt,a4paper,landscape]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[left=2.00cm, right=2.00cm, top=3.50cm, bottom=1.00cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{tcolorbox}
+\usepackage{array,tabularx}
+\usepackage{colortbl}
+\usepackage{xcolor}
+\begin{document}
+	\thispagestyle{empty}
+	\begin{center}
+	\newcolumntype{Y}{>{\raggedleft\arraybackslash}X}% see tabularx
+	\tcbset{fonttitle=\bfseries\large,fontupper=\normalsize\sffamily,colback=white,colframe=green!50!black,colbacktitle=green!90!black!90,
+		coltitle=white,center title}
+	\begin{tcolorbox}[tabularx={X||X|X|X|X|X|X},title={\sffamily ``MY SCHEDULE''}]
+		\textbf{Hour} & \textbf{Monday} & \textbf{Tuesday} & \textbf{Wednesday} & \textbf{Thursday} & \textbf{Friday}&\textbf{Saturday}\\\hline\hline
+		4 AM & Get up & Get up & Get up & Get up & Get up&Get up\\\hline
+		5 AM & Take a shower & Take a shower&Take a shower&Take a shower & Take a shower & Take a shower \\\hline
+		6 AM & Burrita & Burrita&Burrita& Burrita& Burrita & Take a bus \\\hline
+		7 AM & Breakfast & Breakfast&Breakfast& Breakfast& Breakfast & Breakfast  \\\hline\hline
+		8 AM & \textcolor{green!60!black!95}{Numérico J162}& Crai  & \textcolor{green!60!black!95}{Numérico J162 }&\textcolor{green!60!black!95}{NuméricoPC s3} &Crai&\textcolor{green!60!black!95}{TopoPC R411}\\\hline
+		9 AM& \textcolor{green!60!black!95}{Numérico J162}& Crai  &\textcolor{green!60!black!95} {Numérico J162} &\textcolor{green!60!black!95}{NuméricoPC s3} & Crai& \textcolor{green!60!black!95} {TopoPC R411}\\\hline
+		10 AM &\textcolor{green!60!black!95}{Iedo.PcR450} & Crai  & Crai& Crai & Crai & Crai  \\\hline
+		11 AM &\textcolor{green!60!black!95}{Iedo.PcR450} &  Crai & Crai& Crai & Crai & Crai   \\\hline\hline
+		12 PM & LunchTime&LunchTime  & LunchTime & LunchTime & LunchTime&LunchTime\\\hline\hline
+		1 PM& R & R&R & R & R & Crai \\\hline
+		2 PM & \textcolor{green!60!black!95}{Iedo J232} &\textcolor{green!60!black!95}{Variables J162 }&\textcolor{green!60!black!95}{Iedo J232}&\textcolor{green!60!black!95}{Variables J222} & \textcolor{green!60!black!95}{VariablesPcR401} & Crai \\\hline
+		3 PM & \textcolor{green!60!black!95}{Iedo J232} & \textcolor{green!60!black!95}{Variables J162}&\textcolor{green!60!black!95}{Iedo J232}&  \textcolor{green!60!black!95}{VariablesJ222} & \textcolor{green!60!black!95}{VariablesPcR401} & Crai\\\hline
+		4 PM & Crai& \textcolor{green!60!black!95}{Topo R4} &Crai& \textcolor{green!60!black!95}{Topo R430} & \textcolor{green!60!black!95}{VariablesPcR401}& Crai \\\hline
+		5 PM& Crai-Cena& \textcolor{green!60!black!95}{Topo R4}-Cena &  Crai-Cena & \textcolor{green!60!black!95}{Topo R430}-Cena&Crai-Cena & Crai \\\hline
+		6 PM & Crai & Crai&Crai&  Crai& Crai &  \\\hline
+		7 PM & \textcolor{green!60!black!95}{English} & \textcolor{green!60!black!95}{English}& \textcolor{green!60!black!95}{English}& \textcolor{green!60!black!95}{English}& \textcolor{green!60!black!95}{English} &  \\\hline
+		8 PM & \textcolor{green!60!black!95}{English} & \textcolor{green!60!black!95}{English}& \textcolor{green!60!black!95}{English}&\textcolor{green!60!black!95}{English}& \textcolor{green!60!black!95}{English}&\\\hline
+		9 PM& && & &  &   \\\hline
+		10 PM &GoToBed&GoToBed  & GoToBed&GoToBed& GoToBed&
+	\end{tcolorbox}
+	\end{center}
+\end{document}

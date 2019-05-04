@@ -8,6 +8,7 @@
 %\numberwithin{equation}{(1)}
 
 \newcommand{\icis}{{\textstyle\int\limits_0^\infty}w_te^{-rt}dt}
+\newcommand{\inti}{{\textstyle\int\limits_0^\infty}}
 \newcommand{\suma}{(1-\alpha + \gamma)}
 \newcommand{\fphi}{\frac{\suma (1-u)\phi}{(1-\alpha)}}
 \title{\textbf{Crecimiento económico y capital humano: metodología para la simulación de una variante del Modelo de Lucas con aplicación a México}\vspace{-0.5cm}}
@@ -24,11 +25,21 @@
 \newcommand{\saltito}{\\[-3mm]}
 \usepackage{array}
 \usepackage{listings}
-\renewcommand{\spanishbibname}{Referencias}
 \renewcommand{\theequation}{\arabic{equation}}
+\renewcommand{\thetable}{\arabic{table}}
 \usepackage{caption}
 
+\newcommand{\blankpage}{
+	\newpage
+	\thispagestyle{empty}
+	\mbox{}
+	\newpage
+}
+
+\usepackage[apaciteclassic]{apacite}
+
 \begin{document}
+	
 	\maketitle
 	\begin{abstract}
 		Este trabajo tiene como principal objetivo plantear una variante del modelo de crecimiento de Lucas (1988) que pueda fácilmente ser sujeta a ejercicios de calibración y simulación. Un segundo objetivo es calibrar y simular el modelo propuesto para el caso de México. Para lograr lo anterior, se parte del modelo general de Lucas (1988) y de la estructura de ahorro-inversión propuesta por Solow (1956, 1957). El ejercico de calibración-simulación para México muestra que aumentar el precio del producto per cápita en este país en sólo unas décimas requiere un esfuerzo de ahorro adicional difícil de generar en los proximos años, por lo cual es posible que el creciemiento del futuro cercano siga siendo bajo. La metodología propuesta puede generar un sesgo donde el crecimiento depende en exceso de la trayectoria de capital humano, eso sucede en modelos del tipo de Lucas (1988, 2009). Sin embargo, las formas reducidas del modelo planteado pueden calibrarse y simularse con relativa facilidad para la mayoría de los paises que tienen información de bases de datos públicas, como en la Penn World Table.
@@ -74,7 +85,7 @@
 	\end{equation}
 	Donde $s$ es la tasa de ahorro de la economía, la cual se supone constante, $\eta$ es la tasa de crecimiento de la población y $\alpha$ es la tasa de depreciación del capital físico. Cuando el ahorro per cápita, representado por el término $sy$, es mayor que la depreciación del capital per cápita $(\eta +\delta )k$, el capital per cápita aumenta $(dk/dt>0)$.
 	
-	Sustituyendo \ref{ecu3} en \ref{ecu4} y dividiendo toda la ecuación entre el capital per cápita, se obtiene.
+	Sustituyendo (\ref{ecu3}) en (\ref{ecu4}) y dividiendo toda la ecuación entre el capital per cápita, se obtiene.
 	\begin{equation}\label{ecu5}
 		\frac{dk_t}{dt}\frac{1}{k_t}=g_{kt}=\frac{s(uh_t)^{1-\alpha}h_t^\gamma}{k_t^{1-\alpha}}-(\eta + \delta)
 	\end{equation}
@@ -83,37 +94,38 @@
 	\end{equation*}
 	Donde $g_{k}$ es la tasa de crecimiento del capital per cápita
 	
-	Dado que la derivada del crecimiento del capital per cápita respecto al nivel de la misma variable es negativa, la ecuación diferencial \ref{ecu5} converge a un nivel de crecimiento estable  del capital per cápita. Dicho crecimiento puede obtenerse igualando la tasa de crecimiento del numerador del cociente del primer término del lado derecho de la ecuación \ref{ecu5} con la tasa de crecimiento del denominador de dicho término, en cuyo caso y suponiendo que $u$ es constante, se obtiene :\footnote{Para obtener la tasa de crecimiento del numerador y denominador del primer término del lado derecho de la ecuación (\ref{ecu5}), se toman los logaritmos de dichos términos y luego se derivan con respecto al tiempo. Como $s$ y $u$ se suponen constantes, los cambios de los logaritmos de esas variables en el tiempo son cero.}
+	Dado que la derivada del crecimiento del capital per cápita respecto al nivel de la misma variable es negativa, la ecuación diferencial (\ref{ecu5}) converge a un nivel de crecimiento estable  del capital per cápita. Dicho crecimiento puede obtenerse igualando la tasa de crecimiento del numerador del cociente del primer término del lado derecho de la ecuación (\ref{ecu5}) con la tasa de crecimiento del denominador de dicho término, en cuyo caso y suponiendo que $u$ es constante, se obtiene :\footnote{Para obtener la tasa de crecimiento del numerador y denominador del primer término del lado derecho de la ecuación (\ref{ecu5}), se toman los logaritmos de dichos términos y luego se derivan con respecto al tiempo. Como $s$ y $u$ se suponen constantes, los cambios de los logaritmos de esas variables en el tiempo son cero.}
 	\begin{equation}\label{ecu6}
 		(1-\alpha + \gamma)g_h=(1-\alpha)g_k
 	\end{equation}
 	Siendo $g_h$ la tasa de crecimiento del capital humano.
 	
-	La tasa de crecimiento de capital humano puede obtenerse dividiendo la ecuación \ref{ecu2} por el acervo de capital humano. El resultado de esta operación es
+	La tasa de crecimiento de capital humano puede obtenerse dividiendo la ecuación (\ref{ecu2}) por el acervo de capital humano. El resultado de esta operación es
 	\begin{equation}\label{ecu7}
 		g_h=\frac{dh_t}{dt}\frac{1}{h_t}=(1-u)\phi
 	\end{equation}
 	Si $u$ y $\phi$ son constantes, entonces la tasa de crecimiento de capital humano es también constante.
 	
-	De aquí se por \ref{ecu6} y \ref{ecu7}, se obtiene que
+	De aquí se por (\ref{ecu6} )y (\ref{ecu7}), se obtiene que
 	\begin{equation}\label{ecu8}
 		g_k=\frac{(1-\alpha +\gamma)}{(1-\alpha)}(1-u)\phi
 	\end{equation}
 	
-	La ecuación \ref{ecu8} muestra que el crecimiento del capital per cápita es proporcional al crecimiento del capital humano. El valor de la proporción sería exactamente igual a la unidad si la externalidad de Lucas fuera a cero y mayor a uno si la externalidad realmente ocurre (es positiva).
+	La ecuación (\ref{ecu8}) muestra que el crecimiento del capital per cápita es proporcional al crecimiento del capital humano. El valor de la proporción sería exactamente igual a la unidad si la externalidad de Lucas fuera a cero y mayor a uno si la externalidad realmente ocurre (es positiva).
 	
-	Obteniendo logaritmos de la función producción \ref{ecu3} y derivando esos logaritmos 
+	Obteniendo logaritmos de la función producción (\ref{ecu3}) y derivando esos logaritmos 
 	\begin{equation}\label{ecu9}
 		g_y=\alpha g_k + (1-\alpha +\gamma)g_h
 	\end{equation}
 	
-	Sustituyendo \ref{ecu7} y \ref{ecu8}
+	Sustituyendo (\ref{ecu7}) y (\ref{ecu8})
 	\begin{equation}\label{ecu10}
 		g_y=\alpha\frac{(1-\alpha +\gamma)}{(1-\alpha)}g_h + \frac{(1-\alpha + \gamma)(1-\alpha)}{(1-\alpha)}g_h=\frac{(1-\alpha + \gamma)}{(1-\alpha)}(1-u)\phi=g_k
 	\end{equation}
-	En largo plazo, tanto el capital per cápita como el producto per cápita crecen a la tasa que muestra el lado derecho de la ecuación \ref{ecu8}. Sin embargo, aun cuando se suponga que esa tasa es constante, no es posible saber cuál es su magnitud, pues tanto el modelo de Uzawa (1965), como en el de Lucas (1988), el porcentaje del tiempo dedicado al estudio $(1-u)$, y por lo tanto también al trabajo, son variables endógenas. La tarea entonces determinar una ecuación para el parámetro $u$ y de ahí definir cuál es la tasa de crecimiento del producto per cápita de equilibrio de largo plazo.
+	En largo plazo, tanto el capital per cápita como el producto per cápita crecen a la tasa que muestra el lado derecho de la ecuación (\ref{ecu8}). Sin embargo, aun cuando se suponga que esa tasa es constante, no es posible saber cuál es su magnitud, pues tanto el modelo de Uzawa (1965), como en el de Lucas (1988), el porcentaje del tiempo dedicado al estudio $(1-u)$, y por lo tanto también al trabajo, son variables endógenas. La tarea entonces determinar una ecuación para el parámetro $u$ y de ahí definir cuál es la tasa de crecimiento del producto per cápita de equilibrio de largo plazo.
 	
-	\chapter{La determinación del porcentaje de tiempo dedicado al trabajo y al estudio} 
+	\chapter{La determinación del porcentaje de tiempo dedicado al trabajo y al estudio}
+	\setcounter{equation}{10}
 	Los productores del sector de bienes maximizan beneficios. La función de beneficios es:
 	\begin{equation}\label{ecu11}
 		K_t^\alpha (uh_tL_t)^{1-\alpha}h_t^\gamma -w_tL_{bt}-(r_t + \delta)K_t
@@ -126,11 +138,11 @@
 	\begin{equation}\label{ecu13}
 		w_t=(1-\alpha)K_t^\alpha(uh_tL_t)^{-\alpha}(uh_t)h_t^\gamma=(1-\alpha)k_t^\alpha u^{1-\alpha}h_t^{1-\alpha+\gamma}
 	\end{equation}
-	La ecuación \ref{ecu12} muestra que la productividad marginal del capital, que es la derivada de la función producción \ref{ecu1} con respecto al capital físico, es igual al costo marginal del capital, el cual se representa por la suma del rendimiento del capital $(r)$ y la tasa de depreciación del mismo. Por su parte, la ecuación \ref{ecu13} muestra que el salario real $(w)$ es igual al producto marginal del trabajo , al cual, a su vez, depende positivamente del capital per cápita, del porcentaje del tiempo dedicado al trabajo y del capital humano.
+	La ecuación (\ref{ecu12}) muestra que la productividad marginal del capital, que es la derivada de la función producción (\ref{ecu1}) con respecto al capital físico, es igual al costo marginal del capital, el cual se representa por la suma del rendimiento del capital $(r)$ y la tasa de depreciación del mismo. Por su parte, la ecuación (\ref{ecu13}) muestra que el salario real $(w)$ es igual al producto marginal del trabajo , al cual, a su vez, depende positivamente del capital per cápita, del porcentaje del tiempo dedicado al trabajo y del capital humano.
 	
 	\addtocounter{footnote}{12}
 	
-	Para calcular $u$ suponiendo un estado estacionario permanente, o en vecindades muy cercanas a dicho estado, utilizamos los resultados de las ecuaciones \ref{ecu7} y \ref{ecu8}, que implican que en el estado estacionario el capital físico per cápita y el capital humano crecen a las tasas señaladas por estas ecuaciones, de modo que las trayectorias del capital físico per cápita y el capital humano por individuo pueden definirse como:\footnote{Hay que señalar que de acuerdo a los supuestos de este trabajo el crecimiento del capital humano individual toma el valor señalado en la ecuación \ref{ecu7} en todo momento del tiempo. Independientemente de si el capital físico per cápita está o no en su trayectoria de largo plazo.}
+	Para calcular $u$ suponiendo un estado estacionario permanente, o en vecindades muy cercanas a dicho estado, utilizamos los resultados de las ecuaciones (\ref{ecu7}) y (\ref{ecu8}), que implican que en el estado estacionario el capital físico per cápita y el capital humano crecen a las tasas señaladas por estas ecuaciones, de modo que las trayectorias del capital físico per cápita y el capital humano por individuo pueden definirse como:\footnote{Hay que señalar que de acuerdo a los supuestos de este trabajo el crecimiento del capital humano individual toma el valor señalado en la ecuación (\ref{ecu7}) en todo momento del tiempo. Independientemente de si el capital físico per cápita está o no en su trayectoria de largo plazo.}
 	\begin{equation}\label{ecu14}
 		k_t=k(0)e^{\fphi t}
 	\end{equation}
@@ -156,12 +168,11 @@
 	\end{equation}
 	Utilizando las ecuaciones (15) y (17) esta integral se expresa como 
 	\begin{equation}\label{ecu19}
-		\icis =(1-\alpha)k_0^\alpha h_0^{1-\alpha + \gamma} u^{1-\gamma}\int\limits_0^\infty e^{-(r-\fphi)t}
+		\icis =(1-\alpha)k_0^\alpha h_0^{1-\alpha + \gamma} u^{1-\gamma}\textstyle\int\limits_0^\infty e^{-(r-\fphi)t}
 	\end{equation}
 	La misma integral puede expresarse como
 	\begin{equation}\label{ecu20}
-		\icis=-\frac{(1-\alpha)k_0^\alpha h_0^{1-\alpha + \gamma}u^{1-\alpha}}{(r-\fphi)}\int\limits_0^\in
-		fty e^{-(r-\fphi)t}
+		\icis=-\frac{(1-\alpha)k_0^\alpha h_0^{1-\alpha + \gamma}u^{1-\alpha}}{(r-\fphi)}\textstyle\int\limits_0^\infty e^{-(r-\fphi)t}
 	\end{equation}
 	$$(-(r-\fphi))dt$$
 	La solución de la integral es
@@ -216,9 +227,10 @@
 		\vfill{\rule{1cm}{0.5mm}}          
 	\end{center} 
 	\newpage
+	\addtocounter{chapter}{1}
 	\chapter{Calibración del modelo}
 	\addtocounter{footnote}{17}
-	En una primera instancia, el modelo se calibró utilizando los datos promedios de la PWT 8.1 entre 2000 y 2011. En este caso se tomaron los datos promediio de las variables $s, \alpha,\eta, \delta$ y $g_h$ y se encontraron como incógnitas $u, \phi$ y $r$ en las ecuaciones (41), (42) y (43). Cabe señalar que el crecimiento promedio observado del PBI per cápita de México entre 2000 y 2011 (0.7 geométrico y 1.1 aritmético) coincide en gran medida con el crecimiento observado promedio del índice de capital humano de la PWT 8.1 (1.0 tanto geométrico como aritmético).\footnote{Por promedio geométrico se entiende tomar la última cifra de la serie(en este caso en 2011), dividirla entre la primera cifra de la serie (en este caso en 2000), elevar ese factor a la razón de 1 entre el número de datos menos uno(en este caso 1/11), restarle 1 y multiplicar todo ese factor por 100. En cambio el promedio aritmético consiste en obtener el promedio simple de los crecimientos anuales de la serie en cuestión.} Lo que es muy congruente con los pronósticos del modelo de Lucas (1988) con externalidad igual a cero $(\gamma=0)$.$^{19}$
+	En una primera instancia, el modelo se calibró utilizando los datos promedios de la PWT 8.1 entre 2000 y 2011. En este caso se tomaron los datos promediio de las variables $s, \alpha,\eta, \delta$ y $g_h$ y se encontraron como incógnitas $u, \phi$ y $r$ en las ecuaciones (41), (42) y (43). Cabe señalar que el crecimiento promedio observado del PBI per cápita de México entre 2000 y 2011 (0.7 geométrico y 1.1 aritmético) coincide en gran medida con el crecimiento observado promedio del índice de capital humano de la PWT 8.1 (1.0 tanto geométrico como aritmético).\footnote{Por promedio geométrico se entiende tomar la última cifra de la serie(en este caso en 2011), dividirla entre la primera cifra de la serie (en este caso en 2000), elevar ese factor a la razón de 1 entre el número de datos menos uno(en este caso 1/11), restarle 1 y multiplicar todo ese factor por 100. En cambio el promedio aritmético consiste en obtener el promedio simple de los crecimientos anuales de la serie en cuestión.} Lo que es muy congruente con los pronósticos del modelo de Lucas (1988) con externalidad igual a cero $(\gamma=0)$.\footnote{La razón por la cual los promedios aritmético y geométrico de los crecimientos del PIB per cápita difieren mucho más que los mismos conceptos aplicados a la serie de capital humano es que la primera serie tiene mucha mayor votalidad.}
 	
 	Los datos que se obtuvieron de la PWT 8.0 y 8.1 y las incógnitas de calidad de la educación, $\phi$, rendimiento del capital $r$ y participación laboral $u$ en las ecuaciones (41) a (44) son los siguientes:
 	\newpage
@@ -228,7 +240,7 @@
      		\vspace{0.7cm}
      		\begin{tabular}{|l|l|}
      			\hline
-     			\parbox{8cm}{\textbf{Variables obtenidas en la Penn World Table}} & \parbox{8cm}{\textbf{Valores númericos promedio entre 2000 y 2011}} \\ 
+     			\parbox{8cm}{\textbf{\saltito Variables obtenidas en la Penn World Table}} & \parbox{8cm}{\textbf{\saltito Valores númericos promedio entre 2000 y 2011}} \\ 
      			\hline
      			\parbox{8cm}{Participación del capital en el producto (proxy del parámetro $\alpha$)}&0.614\\
      			\hline
@@ -253,7 +265,10 @@
      		\captionsetup{singlelinecheck=off}
      		\caption*{Fuente: PWT 8.0 y 8.1 y elaboración propia}
      	\end{table}
+     	\blankpage
      	\nocite{*}
-     	\bibliography{bibliografia}
-     	\bibliographystyle{apacite*}
-\end{document}     
+     	\bibliographystyle{apacite}
+     	\bibliography{PC1_SILVA}
+     	
+     	
+\end{document}

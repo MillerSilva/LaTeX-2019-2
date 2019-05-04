@@ -1,0 +1,305 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\linespread{1.5}
+\usepackage{here}
+\usepackage{xcolor}
+
+
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{5}
+
+\usepackage{titlesec}
+\titleformat{name=\chapter}
+[display]
+{\sffamily\bfseries\color{orange}\normalsize\filcenter}
+{\chaptertitlename\space\Roman{chapter}}
+{3mm}
+{}
+\titlespacing{\chapter}
+{0pt}
+{-3cm}
+{1cm}
+
+
+\titleformat{name=\chapter,numberless}
+[display]
+{\sffamily\bfseries\color{orange}\normalsize\filleft}
+{}
+{3mm}
+{}
+
+\usepackage{titlesec}
+\titleformat{name=\section}
+[hang]
+{\bfseries\color{magenta}\large\titlerule\filleft}
+{Sección\space\Alph{section}\quad}
+{1cm}
+{}
+\titlespacing*{\section}
+{5mm}
+{1cm}
+{1.5cm}
+
+\usepackage{tocloft}
+\setlength{\cftbeforetoctitleskip}{-3cm}
+\setlength{\cftaftertoctitleskip}{5mm}
+
+\renewcommand{\cftloftitlefont}{\color{pink}\hfil}
+
+\renewcommand{\cftdot}{-}
+%\renewcommand{\cftdotsep}{15}
+\renewcommand{\cftdotsep}{\cftnodots}
+
+\setlength{\cftsecindent}{0pt}
+\setlength{\cftsubsecindent}{0pt}
+
+
+\begin{document}
+
+\tableofcontents
+
+\newpage
+\listoffigures
+\newpage
+
+\begingroup
+\renewcommand*{\addvspace}[1]{}
+\listoftables
+\endgroup
+
+
+\chapter*{Introducción}\addcontentsline{toc}{chapter}{Introducción}
+Más concretamente, es el movimiento que hace el polo norte terrestre respecto al punto central de la elipse 
+que describe la Tierra en el movimiento de translación.
+
+Esta oscilación fue descrita por primera vez por el astrónomo, geógrafo y matemático
+
+\chapter{Primer cap}\pagenumbering{arabic}
+Te contamos —o recordamos— cuáles son los otros tres, también importantes, que ejecuta el planeta.
+\section{La primera sección (cap 1)}
+Te contamos —o recordamos— cuáles son los otros tres, también importantes, que ejecuta el planeta.
+\subsection{subsección primera [sección 1 (cap 1)]}
+\subsubsection{1era subsubsección (ssección 1 [sección 1 (cap 1)])}
+\paragraph{párrafo 1 de la subsección 1 ...}
+\subparagraph{subpárrafo 1 : párrafo 1 de la subsección 1 ...}
+\subparagraph{subpárrafo 2 : párrafo 1 de la subsección 1 ...}
+\paragraph{párrafo 2 de la subsección 1 ...}
+\subparagraph{subpárrafo 1 : párrafo 2 de la subsección 1 ...}
+\subparagraph{subpárrafo 2 : párrafo 2 de la subsección 1 ...}
+\subsubsection{2da subsubsección (ssección 1 [sección 1 (cap 1)])}
+\subsubsection{3era subsubsección (ssección 1 [sección 1 (cap 1)])}
+\begin{table}[H]
+\caption{tabla en la primera sección (cap 1)}
+\end{table}
+\subsection{subsección segunda [sección 1 (cap 1)]}
+\subsection{subsección tercera [sección 1 (cap 1)]}
+\section{La segunda sección (cap 1)}
+\begin{figure}[H]
+\caption{Figura en la segunda sección (cap 1)}
+\end{figure}
+\subsection{subsección primera [sección 2 (cap 1)]}
+\subsection{subsección segunda [sección 2 (cap 1)]}
+\subsection{subsección tercera [sección 2 (cap 1)]}
+\section{La tercera sección (cap 1)}
+\begin{table}[H]
+\caption{tabla en la tercera sección (cap 1)}
+\end{table}
+\begin{figure}[H]
+\caption{Figura en la tercera sección (cap 1)}
+\end{figure}
+\subsection{subsección primera [sección 3 (cap 1)]}
+\subsection{subsección segunda [sección 3 (cap 1)]}
+\begin{table}[H]
+\caption{tabla en la tercera sección (cap 1)}
+\end{table}
+\subsection{subsección tercera [sección 3 (cap 1)]}
+
+\chapter{Segundo cap}
+\begin{figure}[H]
+\caption{Figura en el segundo cap (cap 2)}
+\end{figure}
+\section{La primera sección (cap 2)}
+\subsection{subsección primera [sección 1 (cap 2)]}
+\subsection{subsección segunda [sección 1 (cap 2)]}
+\begin{figure}[H]
+\caption{Figura en la primera sección (cap 2)}
+\end{figure}
+\subsection{subsección tercera [sección 1 (cap 2)]}
+\section{La segunda sección (cap 2)}
+\subsection{subsección primera [sección 2 (cap 2)]}
+\subsubsection{1era subsubsección (ssección 1 [sección 2 (cap 2)])}
+\subsubsection{2da subsubsección (ssección 1 [sección 2 (cap 2)])}
+\subsubsection{3era subsubsección (ssección 1 [sección 2 (cap 2)])}
+\subsection{subsección segunda [sección 2 (cap 2)]}
+\subsection{subsección tercera [sección 2 (cap 2)]}
+\section{La tercera sección (cap 2)}
+\begin{table}[H]
+\caption{tabla en la tercera sección (cap 2)}
+\end{table}
+\subsection{subsección primera [sección 3 (cap 2)]}
+\subsection{subsección segunda [sección 3 (cap 2)]}
+\subsection{subsección tercera [sección 3 (cap 2)]}
+
+\chapter{Tercer cap}
+\section{La primera sección (cap 3)}
+\begin{table}[H]
+\caption{tabla en la primera sección (cap 3)}
+\end{table}
+\subsection{subsección primera [sección 1 (cap 3)]}
+\subsection{subsección segunda [sección 1 (cap 3)]}
+\subsection{subsección tercera [sección 1 (cap 3)]}
+\section{La segunda sección (cap 1)}
+\subsection{subsección primera [sección 2 (cap 3)]}
+\subsection{subsección segunda [sección 2 (cap 3)]}
+\subsection{subsección tercera [sección 2 (cap 3)]}
+\section{La tercera sección (cap 1)}
+\begin{figure}[H]
+\caption{Figura en la tercera sección (cap 3)}
+\end{figure}
+\subsection{subsección primera [sección 3 (cap 3)]}
+\subsubsection{1er subsubsección (ssección 1 [sección 3 (cap 3)])}
+\paragraph{párrafo 1 de la subsección 1 ...}
+\paragraph{párrafo 2 de la subsección 1 ...}
+\subparagraph{subpárrafo 1 del párrafo 2}
+\subparagraph{subpárrafo 2 del párrafo 2}
+\paragraph{párrafo 2 de la subsección 1 ...}
+\subsection{subsección segunda [sección 3 (cap 3)]}
+\subsection{subsección tercera [sección 3 (cap 3)]}
+
+
+
+\chapter*{Primer cap}\pagenumbering{arabic}
+\section*{La primera sección (cap 1)}
+\subsection*{subsección primera [sección 1 (cap 1)]}
+\subsubsection*{1era subsubsección (ssección 1 [sección 1 (cap 1)])}
+\paragraph*{párrafo 1 de la subsección 1 ...}
+\subparagraph*{subpárrafo 1 : párrafo 1 de la subsección 1 ...}
+\subparagraph*{subpárrafo 2 : párrafo 1 de la subsección 1 ...}
+\paragraph*{párrafo 2 de la subsección 1 ...}
+\subparagraph*{subpárrafo 1 : párrafo 2 de la subsección 1 ...}
+\subparagraph*{subpárrafo 2 : párrafo 2 de la subsección 1 ...}
+\subsubsection*{2da subsubsección (ssección 1 [sección 1 (cap 1)])}
+\subsubsection*{3era subsubsección (ssección 1 [sección 1 (cap 1)])}
+\begin{table}[H]
+\caption{tabla en la primera sección (cap 1)}
+\end{table}
+\subsection*{subsección segunda [sección 1 (cap 1)]}
+\subsection*{subsección tercera [sección 1 (cap 1)]}
+\section+{La segunda sección (cap 1)}
+\begin{figure}[H]
+\caption{Figura en la segunda sección (cap 1)}
+\end{figure}
+\subsection*{subsección primera [sección 2 (cap 1)]}
+\subsection*{subsección segunda [sección 2 (cap 1)]}
+\subsection*{subsección tercera [sección 2 (cap 1)]}
+\section{La tercera sección (cap 1)}
+\begin{table}[H]
+\caption{tabla en la tercera sección (cap 1)}
+\end{table}
+\begin{figure}[H]
+\caption{Figura en la tercera sección (cap 1)}
+\end{figure}
+\subsection{subsección primera [sección 3 (cap 1)]}
+\subsection{subsección segunda [sección 3 (cap 1)]}
+\begin{table}[H]
+\caption{tabla en la tercera sección (cap 1)}
+\end{table}
+\subsection{subsección tercera [sección 3 (cap 1)]}
+
+\chapter*{Segundo cap}
+\begin{figure}[H]
+\caption{Figura en el segundo cap (cap 2)}
+\end{figure}
+\section*{La primera sección (cap 2)}
+\subsection*{subsección primera [sección 1 (cap 2)]}
+\subsection*{subsección segunda [sección 1 (cap 2)]}
+\begin{figure}[H]
+\caption{Figura en la primera sección (cap 2)}
+\end{figure}
+\subsection*{subsección tercera [sección 1 (cap 2)]}
+\section*{La segunda sección (cap 2)}
+\subsection*{subsección primera [sección 2 (cap 2)]}
+\subsubsection*{1era subsubsección (ssección 1 [sección 2 (cap 2)])}
+\subsubsection*{2da subsubsección (ssección 1 [sección 2 (cap 2)])}
+\subsubsection*{3era subsubsección (ssección 1 [sección 2 (cap 2)])}
+\subsection*{subsección segunda [sección 2 (cap 2)]}
+\subsection*{subsección tercera [sección 2 (cap 2)]}
+\section*{La tercera sección (cap 2)}
+\begin{table}[H]
+\caption{tabla en la tercera sección (cap 2)}
+\end{table}
+\subsection*{subsección primera [sección 3 (cap 2)]}
+\subsection*{subsección segunda [sección 3 (cap 2)]}
+\subsection*{subsección tercera [sección 3 (cap 2)]}
+
+\chapter*{Tercer cap}
+\section*{La primera sección (cap 3)}
+\begin{table}[H]
+\caption{tabla en la primera sección (cap 3)}
+\end{table}
+\subsection+{subsección primera [sección 1 (cap 3)]}
+\subsection*{subsección segunda [sección 1 (cap 3)]}
+\subsection+{subsección tercera [sección 1 (cap 3)]}
+\section*{La segunda sección (cap 1)}
+\subsection*{subsección primera [sección 2 (cap 3)]}
+\subsection*{subsección segunda [sección 2 (cap 3)]}
+\subsection*{subsección tercera [sección 2 (cap 3)]}
+\section*{La tercera sección (cap 1)}
+\begin{figure}[H]
+\caption{Figura en la tercera sección (cap 3)}
+\end{figure}
+\subsection*{subsección primera [sección 3 (cap 3)]}
+\subsubsection*{1er subsubsección (ssección 1 [sección 3 (cap 3)])}
+\paragraph*{párrafo 1 de la subsección 1 ...}
+\paragraph*{párrafo 2 de la subsección 1 ...}
+\subparagraph*{subpárrafo 1 del párrafo 2}
+\subparagraph*{subpárrafo 2 del párrafo 2}
+\paragraph*{párrafo 2 de la subsección 1 ...}
+\subsection*{subsección segunda [sección 3 (cap 3)]}
+\subsection*{subsección tercera [sección 3 (cap 3)]}
+
+%\addtocontents{toc}{\protect\rule{6cm}{1mm}}
+
+\appendix
+\chapter{Primer cap}\pagenumbering{arabic}
+\section{La primera sección (cap 1)}
+\subsection{subsección primera [sección 1 (cap 1)]}
+\subsubsection{1era subsubsección (ssección 1 [sección 1 (cap 1)])}
+\paragraph{párrafo 1 de la subsección 1 ...}
+\subparagraph{subpárrafo 1 : párrafo 1 de la subsección 1 ...}
+\subparagraph{subpárrafo 2 : párrafo 1 de la subsección 1 ...}
+\paragraph{párrafo 2 de la subsección 1 ...}
+\subparagraph{subpárrafo 1 : párrafo 2 de la subsección 1 ...}
+\subparagraph{subpárrafo 2 : párrafo 2 de la subsección 1 ...}
+\subsubsection{2da subsubsección (ssección 1 [sección 1 (cap 1)])}
+\subsubsection{3era subsubsección (ssección 1 [sección 1 (cap 1)])}
+\begin{table}[H]
+\caption{tabla en la primera sección (cap 1)}
+\end{table}
+\subsection{subsección segunda [sección 1 (cap 1)]}
+\subsection{subsección tercera [sección 1 (cap 1)]}
+\section{La segunda sección (cap 1)}
+\begin{figure}[H]
+\caption{Figura en la segunda sección (cap 1)}
+\end{figure}
+\subsection{subsección primera [sección 2 (cap 1)]}
+\subsection{subsección segunda [sección 2 (cap 1)]}
+\subsection{subsección tercera [sección 2 (cap 1)]}
+\section{La tercera sección (cap 1)}
+\begin{table}[H]
+\caption{tabla en la tercera sección (cap 1)}
+\end{table}
+\begin{figure}[H]
+\caption{Figura en la tercera sección (cap 1)}
+\end{figure}
+\subsection{subsección primera [sección 3 (cap 1)]}
+\subsection{subsección segunda [sección 3 (cap 1)]}
+\begin{table}[H]
+\caption{tabla en la tercera sección (cap 1)}
+\end{table}
+\subsection{subsección tercera [sección 3 (cap 1)]}
+
+
+\end{document} 

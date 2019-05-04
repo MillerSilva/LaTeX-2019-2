@@ -1,0 +1,26 @@
+\documentclass{report}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+
+\usepackage{graphicx}
+\graphicspath{{./c1/}{./c2/}}
+
+\usepackage{transparent}
+
+%\usepackage[colorgrid]{eso-pic}
+\usepackage{eso-pic}
+\AddToShipoutPictureBG{%
+\put(100,200){\rotatebox{45}{\fontsize{80}{88}\selectfont \bfseries \texttransparent{0.2}{PALABRA}}}
+\put(50,200){\shortstack{\fontsize{80}{88}\selectfont\transparent{0.2} J\\u\\a\\n\\[5mm]P\\é\\r\\e\\z}}
+}
+
+\begin{document}
+
+\input{./c1/c1.tex}
+
+\input{./c2/c2}
+
+
+
+\end{document}

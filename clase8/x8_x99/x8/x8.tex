@@ -1,0 +1,168 @@
+%\documentclass[utf8,spanish,xcolor={svgnames},14pt]{beamer}
+\documentclass[utf8,spanish,xcolor={svgnames},14pt,handout]{beamer}
+
+\uselanguage{spanish}
+\languagepath{spanish}
+
+%\usetheme{CambridgeUS}
+\usetheme{Warsaw}
+%\usetheme{Singapore}
+%\usecolortheme{albatross}
+\usecolortheme{crane}
+\useinnertheme{rectangles}
+%\useoutertheme{infolines}
+\useoutertheme{sidebar}
+\usefonttheme[onlymath]{serif}
+
+
+\title{Mi primera exposición}
+\subtitle{En CTCI--UNI}
+\author{Juan Pérez}
+\institute[UNI]{UNIVERSIDAD NACIONAL DE INGENIERÍA}
+\date{13 de febrero del 2019}
+
+\begin{document}
+\maketitle
+
+\begin{frame}{Contenido de mi exposición}\transblindsvertical
+\tableofcontents
+\end{frame}
+
+\section{Mis primeros slides}
+\subsection{básicos}
+\begin{frame}\transsplithorizontalout
+hola
+\end{frame}
+
+\begin{frame}{Mi primera diapositiva}{hoy 13 de marzo}\transsplithorizontalout
+hola2
+\end{frame}
+
+\begin{frame}[t]
+hola3
+\end{frame}
+
+\begin{frame}[b]
+hola4
+\end{frame}
+
+\subsection{avanzados}
+\begin{frame}[fragile]\transsplitverticalout
+\begin{verbatim}
+esto es          un programa
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[plain]
+esta es una diapositiva en blanco
+
+\end{frame}
+
+
+\section{Overlays}
+\begin{frame}\transblindsvertical
+esta es una diapositiva en blanco00000
+\pause
+
+palabra2 \pause
+palabra3 \pause
+palabra4
+
+\end{frame}
+
+\begin{frame}{Bibliografía}\transsplithorizontalout
+\begin{thebibliography}{9}
+	\bibitem{Kop04}
+	Kopka, Helmut; Daly, Patrick W.
+	\newblock {\em Guide to \LaTeX}. 4th ed.
+	\newblock Pearson Education, Inc., 2004.
+\end{thebibliography}
+\end{frame}
+
+\begin{frame}{listas}\transdissolve
+\begin{itemize}
+	\item hola
+	\begin{itemize}
+		\item hola
+		\item mundo
+		\item hoy día
+	\end{itemize}
+    \item mundo
+    \item hoy día
+\end{itemize}
+
+\begin{enumerate}[a)]
+	\item hola
+	\item mundo
+	\item hoy día
+\end{enumerate}
+
+\begin{description}[MMMMMMMMMMMMMM]
+	\item[hola] Seguramente lo habrás aprendido en la escuela primaria: la Tierra describe una
+	
+	\item[mundo] texto
+\end{description}
+\end{frame}
+
+
+\begin{frame}\transsplithorizontalout
+En la siguiente ecuación
+\begin{equation}
+\int f(x)dx =F(x)+K, K\in R
+\end{equation}
+
+Seguramente lo habrás aprendido en la \alert{escuela primaria}: la Tierra describe una
+
+\begin{alertenv}
+	esto es importante
+\end{alertenv}
+
+\end{frame}
+
+\begin{frame}\transdissolve
+\begin{block}{}
+esto es un bloque
+\end{block}
+
+\begin{block}{bloque común}
+	esto es un bloque
+\end{block}
+
+\begin{exampleblock}{bloque ejemplo}
+	esto es un bloque
+\end{exampleblock}
+
+\begin{alertblock}{bloque importante}
+	esto es un bloque
+\end{alertblock}
+
+\end{frame}
+
+\begin{frame}\transsplitverticalout
+\begin{theorem}[de Pitágoras]
+	esto es un teorema importante
+\end{theorem}
+
+\begin{example}[de la clase]
+	esto es un ejemplo
+\end{example}
+
+\begin{proof}[Prueba]
+	esto es una prueba
+\end{proof}
+\end{frame}
+
+\begin{frame}
+\begin{columns}[b]
+	\begin{column}{5cm}
+		Seguramente lo habrás aprendido en la escuela primaria: la Tierra describe una primaria: la Tierra describe una
+	\end{column}
+
+    \begin{column}{5cm}
+    	texto texto
+    \end{column}
+\end{columns}
+\end{frame}
+
+
+\end{document}
